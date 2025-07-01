@@ -32,59 +32,51 @@
       .mobile-nav::-webkit-scrollbar {
         display: none;
       }
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
     </style>
 </head>
 </head>
 <body>
-<header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-between px-2 md:px-8">
+<header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-center px-2 md:px-8  shadow">
   <!-- Left Nav -->
-  <ul class="header-nav hidden md:flex items-center gap-1.5 md:gap-2 lg:gap-3">
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="index.html" class="hover:text-green-700 hover:underline transition-colors">Accueil</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">A propos de Nous</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">Historique</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">Calendrier</a>
-    </li>
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Accueil</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">A propos</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Historique</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Calendrier</a></li>
   </ul>
-  <!-- Logo Centered -->
-  <div class="flex items-center justify-center flex-shrink-0 mx-0 md:mx-0 absolute left-1/2 top-1/2 -translate-x-1/2 -translate-y-1/2">
-    <span class="text-2xl font-extrabold tracking-tight select-none flex items-center gap-0.5" style="font-family: 'Inter', system-ui, sans-serif;">
-      <span class="inline-block w-3 h-3 rounded-full bg-red-600"></span>
-      <span class="inline-block w-3 h-3 rounded-full bg-green-600"></span>
-      <span class="inline-block w-3 h-3 rounded-full bg-yellow-400"></span>
-      <span class="ml-1 flex items-center">
-        <span class="text-green-800">Festival</span>
-        <span class="text-green-600 ml-1">Evala</span>
-      </span>
-    </span>
-  </div>
+  <!-- Logo Center -->
+  <span class="mx-8 md:mx-16 text-2xl font-extrabold tracking-tight select-none flex items-center gap-2" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-3 h-3 rounded-full bg-red-600"></span>
+    <span class="inline-block w-3 h-3 rounded-full bg-green-600"></span>
+    <span class="inline-block w-3 h-3 rounded-full bg-yellow-400"></span>
+    <span class="ml-1 text-green-800">Evala</span>
+  </span>
   <!-- Right Nav -->
-  <ul class="header-nav hidden md:flex items-center gap-1.5 md:gap-2 lg:gap-3">
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">Contact</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">Gallery</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="#" class="hover:text-green-700 hover:underline transition-colors">Les Evalo</a>
-    </li>
-    <li class="mx-1 text-white text-base font-semibold tracking-wide hover:text-green-700 transition-colors cursor-pointer hover:underline">
-      <a href="kara_maps.html" class="hover:text-green-700 hover:underline transition-colors">Kara Maps</a>
-    </li>
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Contact</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Gallery</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-600 transition">Les Evalo</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-600 transition">Kara Maps</a></li>
   </ul>
-  <!-- Mobile Hamburger -->
-  <button id="mobile-menu-btn" class="md:hidden ml-auto mr-4 mt-5 flex items-center justify-center w-10 h-10 rounded hover:bg-green-100 transition" type="button">
-    <svg class="w-7 h-7 text-green-800" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
-      <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-    </svg>
-  </button>
 </header>
 
 <!-- ...existing code... -->
@@ -105,9 +97,9 @@
   <!-- Slider Track (Images + Texts) -->
   <div class="absolute inset-0 flex transition-transform duration-700" id="slider-track">
     <!-- Slide 1 -->
-    <div class="relative w-full h-full flex-shrink-0">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/societe/une-foire-commerciale-pendant-les-evala/2937566-1-fre-FR/une-foire-commerciale-pendant-les-evala_i1920.jpg" alt="Slide 1" class="w-full h-full object-cover border-0" />
-      <div class="absolute left-2 xs:left-4 md:left-10 top-1/2 -translate-y-1/2 z-10 bg-black/60 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[500px]">
+    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/societe/une-foire-commerciale-pendant-les-evala/2937566-1-fre-FR/une-foire-commerciale-pendant-les-evala_i1920.jpg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10  bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
           La grande saison<br><span class="text-green-300">Evala 2025</span>
         </h1>
@@ -117,21 +109,35 @@
       </div>
     </div>
     <!-- Slide 2 -->
-    <div class="relative w-full h-full flex-shrink-0">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/tradition-respectee/2793355-1-fre-FR/tradition-respectee_i1920.jpg" alt="Slide 2" class="w-full h-full object-cover border-0" />
-      <div class="absolute left-2 xs:left-4 md:left-10 top-1/2 -translate-y-1/2 z-10 bg-black/60 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[500px]">
+    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/tradition-respectee/2793355-1-fre-FR/tradition-respectee_i1920.jpg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10 bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
           Tradition respectée<br><span class="text-green-300">Valeurs & Courage</span>
         </h1>
-        <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
-          Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
-        </p>
+       <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
+  Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
+</p>
+<div class="flex flex-row items-center justify-center gap-4 mt-4">
+  <button class="bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-5 rounded-lg shadow transition duration-200">
+    Acheter Ticket
+  </button>
+  <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-5 rounded-lg shadow transition duration-200 relative overflow-hidden">
+    <span class="relative z-10">Voir Vidéos</span>
+    <span class="relative z-10">
+      <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+        <polygon points="6,4 16,10 6,16" />
+      </svg>
+    </span>
+    <span class="absolute inset-0 rounded-lg pointer-events-none" style="background: radial-gradient(circle at 70% 50%, #6ee7b7 0%, transparent 70%); opacity: 0.3;"></span>
+  </button>
+</div>
       </div>
     </div>
     <!-- Slide 3 -->
-    <div class="relative w-full h-full flex-shrink-0">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/debut-des-evala-en-presence-de-faure-gnassingbe/2875824-2-fre-FR/debut-des-evala-en-presence-de-faure-gnassingbe_i1920.jpg" alt="Slide 3" class="w-full h-full object-cover border-0" />
-      <div class="absolute left-2 xs:left-4 md:left-10 top-1/2 -translate-y-1/2 z-10 bg-black/60 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[500px]">
+    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/debut-des-evala-en-presence-de-faure-gnassingbe/2875824-2-fre-FR/debut-des-evala-en-presence-de-faure-gnassingbe_i1920.jpg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10 bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
           Unité et Fierté<br><span class="text-green-300">Peuple Togolais</span>
         </h1>
@@ -141,41 +147,46 @@
       </div>
     </div>
   </div>
+  <!-- Slider Controls and Countdown remain unchanged -->
   <!-- Slider Controls -->
   <button id="prev" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl md:text-3xl z-20">‹</button>
   <button id="next" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-white bg-opacity-70 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl md:text-3xl z-20">›</button>
   <!-- Countdown inside slider, bottom center -->
-  <div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
-    <div class="flex flex-row items-center gap-4 px-6 py-4 rounded-lg bg-orange-500 text-white font-bold text-lg shadow-lg">
-      <div class="flex flex-col items-center">
-        <span id="weeks" class="text-2xl md:text-3xl font-extrabold">0</span>
-        <span class="text-xs md:text-sm font-medium">Semaines</span>
-      </div>
-      <span class="text-2xl font-extrabold">:</span>
-      <div class="flex flex-col items-center">
-        <span id="days" class="text-2xl md:text-3xl font-extrabold">0</span>
-        <span class="text-xs md:text-sm font-medium">Jours</span>
-      </div>
-      <span class="text-2xl font-extrabold">:</span>
-      <div class="flex flex-col items-center">
-        <span id="hours" class="text-2xl md:text-3xl font-extrabold">0</span>
-        <span class="text-xs md:text-sm font-medium">Heures</span>
-      </div>
-      <span class="text-2xl font-extrabold">:</span>
-      <div class="flex flex-col items-center">
-        <span id="minutes" class="text-2xl md:text-3xl font-extrabold">0</span>
-        <span class="text-xs md:text-sm font-medium">Minutes</span>
-      </div>
-      <span class="text-2xl font-extrabold">:</span>
-      <div class="flex flex-col items-center">
-        <span id="seconds" class="text-2xl md:text-3xl font-extrabold">0</span>
-        <span class="text-xs md:text-sm font-medium">Secondes</span>
-      </div>
+<div class="absolute bottom-6 left-1/2 -translate-x-1/2 z-20">
+  <div class="flex flex-row items-center gap-4 px-6 py-4 rounded-lg bg-transparent text-white font-bold text-lg shadow-lg">
+    <div class="flex flex-col items-center">
+      <span id="weeks" class="text-2xl md:text-3xl font-extrabold">0</span>
+      <span class="text-xs md:text-sm font-medium">Semaines</span>
+    </div>
+    <span class="text-2xl font-extrabold">:</span>
+    <div class="flex flex-col items-center">
+      <span id="days" class="text-2xl md:text-3xl font-extrabold">0</span>
+      <span class="text-xs md:text-sm font-medium">Jours</span>
+    </div>
+    <span class="text-2xl font-extrabold">:</span>
+    <div class="flex flex-col items-center">
+      <span id="hours" class="text-2xl md:text-3xl font-extrabold">0</span>
+      <span class="text-xs md:text-sm font-medium">Heures</span>
+    </div>
+    <span class="text-2xl font-extrabold">:</span>
+    <div class="flex flex-col items-center">
+      <span id="minutes" class="text-2xl md:text-3xl font-extrabold">0</span>
+      <span class="text-xs md:text-sm font-medium">Minutes</span>
+    </div>
+    <span class="text-2xl font-extrabold">:</span>
+    <div class="flex flex-col items-center">
+      <span id="seconds" class="text-2xl md:text-3xl font-extrabold">0</span>
+      <span class="text-xs md:text-sm font-medium">Secondes</span>
     </div>
   </div>
 </div>
 
+
+</main>
+<!-- ...your existing HTML above... -->
+<!-- Add this before </body> -->
 <script>
+  // --- Countdown to 19 July 2025 ---
   function updateCountdown() {
     const now = new Date();
     const target = new Date('2025-07-19T00:00:00');
@@ -197,25 +208,37 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // Slider logic for #slider-track (images + texts)
+  // --- Slider with auto swap every 3 seconds (fade effect) ---
+  // 1. Add 'slide' class to each slide container in your HTML!
+  // 2. Add the fade CSS (see below)
   const sliderTrack = document.getElementById('slider-track');
   const slides = sliderTrack.querySelectorAll('.relative.w-full.h-full.flex-shrink-0');
+  slides.forEach(slide => slide.classList.add('slide'));
   let current = 0;
 
   function showSlide(idx) {
-    sliderTrack.style.transform = `translateX(-${idx * 100}%)`;
+    slides.forEach((slide, i) => {
+      slide.style.opacity = (i === idx) ? '1' : '0';
+      slide.style.zIndex = (i === idx) ? '1' : '0';
+      slide.style.pointerEvents = (i === idx) ? 'auto' : 'none';
+      slide.style.position = 'absolute';
+      slide.style.inset = '0';
+      slide.style.transition = 'opacity 0.7s cubic-bezier(0.4,0,0.2,1)';
+    });
   }
 
   document.getElementById('prev').onclick = function() {
     current = (current - 1 + slides.length) % slides.length;
     showSlide(current);
+    resetAutoSlide();
   };
   document.getElementById('next').onclick = function() {
     current = (current + 1) % slides.length;
     showSlide(current);
+    resetAutoSlide();
   };
 
-  // Optional: swipe support for mobile
+  // Swipe support for mobile
   let startX = null;
   sliderTrack.addEventListener('touchstart', e => startX = e.touches[0].clientX);
   sliderTrack.addEventListener('touchend', e => {
@@ -226,10 +249,23 @@
     startX = null;
   });
 
+  // Auto-slide every 3 seconds
+  let autoSlide = setInterval(() => {
+    current = (current + 1) % slides.length;
+    showSlide(current);
+  }, 3000);
+
+  function resetAutoSlide() {
+    clearInterval(autoSlide);
+    autoSlide = setInterval(() => {
+      current = (current + 1) % slides.length;
+      showSlide(current);
+    }, 3000);
+  }
+
   // Initialize
   showSlide(current);
 </script>
 
-</main>
 </body>
 </html>
