@@ -10,7 +10,7 @@
     <head>
     <style>
       body, .header-nav {
-        font-family: 'Inter', system-ui, sans-serif;
+        font-family: 'Inter', Regular, sans-serif;
       }
       body {
         /* Removed background color and gradient */
@@ -33,6 +33,8 @@
         display: none;
       }
 
+
+
    
   /* Add this to your <head> or CSS file for fade effect */
 
@@ -46,7 +48,9 @@
   }
   header ul li a {
     display: block;
+    font-size:13px;
     color:white;
+    font-weight:none;
     padding: 0.25rem 0.75rem;
   }
 </style>
@@ -58,10 +62,10 @@
 <header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-center px-2 md:px-8  ">
   <!-- Left Nav -->
   <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Accueil</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">A propos</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Historique</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">A propos</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
   </ul>
   <!-- Logo Center -->
   <span class="mx-8 md:mx-16 text-2xl font-extrabold tracking-tight select-none flex items-center gap-2" style="font-family: 'Inter', system-ui, sans-serif;">
@@ -72,10 +76,10 @@
   </span>
   <!-- Right Nav -->
   <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Contact</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Gallery</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-white-600 transition">Les Evalo</a></li>
-    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-white-600 transition">Kara Maps</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalos</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
   </ul>
 </header>
 
@@ -89,7 +93,7 @@
   <a href="#" class="hover:text-green-600 transition">Event(Calendrier)</a>
   <a href="#" class="hover:text-green-600 transition">Contact</a>
   <a href="#" class="hover:text-green-600 transition">Gallery</a>
-  <a href="#" class="hover:text-green-600 transition">Les Evalo</a>
+  <a href="#" class="hover:text-green-600 transition">Les Evalos</a>
   <a href="kara_maps.html" class="hover:text-green-600 transition">Kara Maps</a>
 </div>
 <main class="">
@@ -98,10 +102,10 @@
   <div class="absolute inset-0 flex transition-transform duration-700" id="slider-track">
     <!-- Slide 1 -->
     <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/societe/une-foire-commerciale-pendant-les-evala/2937566-1-fre-FR/une-foire-commerciale-pendant-les-evala_i1920.jpg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10  bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
+      <img src="images/img3.jpeg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10   px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[200vw] md:max-w-[1200px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-          La grande saison<br><span class="text-green-300">Evala 2025</span>
+          La grande saison<span class="text-green-300">  Evala 2025</span>
         </h1>
         <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
           Découvrez la tradition, la force et la passion du plus grand festival du nord Togo.
@@ -110,10 +114,10 @@
     </div>
     <!-- Slide 2 -->
     <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/tradition-respectee/2793355-1-fre-FR/tradition-respectee_i1920.jpg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10 bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
+      <img src="images/img2.jpeg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10  px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-          Tradition respectée<br><span class="text-green-300">Valeurs & Courage</span>
+          Tradition respectée<span class="text-green-300">   Valeurs & Courage</span>
         </h1>
        <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
   Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
@@ -136,10 +140,10 @@
     </div>
     <!-- Slide 3 -->
     <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="https://www.republicoftogo.com/var/site/storage/images/toutes-les-rubriques/culture/debut-des-evala-en-presence-de-faure-gnassingbe/2875824-2-fre-FR/debut-des-evala-en-presence-de-faure-gnassingbe_i1920.jpg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10 bg-black/10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[800px] text-center mx-auto">
+      <img src="images/img1.jpeg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
+      <div class="relative z-10  px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl shadow-lg max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
         <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-          Unité et Fierté<br><span class="text-green-300">Peuple Togolais</span>
+          Unité et Fierté<span class="text-green-300">   Peuple Togolais</span>
         </h1>
         <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
           Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
