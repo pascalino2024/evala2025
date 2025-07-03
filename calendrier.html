@@ -1,0 +1,245 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
+    </style>
+</head>
+</head>
+<body>
+<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
+  <!-- Left Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="index.html" class="text-green-100 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">La Foire</a></li>
+  </ul>
+  <!-- Logo Center -->
+  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
+  <!-- Right Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Contact</a></li>
+  </ul>
+</header>
+
+
+<main class="pt-24 pb-32 bg-gradient-to-br from-green-50 via-white to-green-100 min-h-screen">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-900 tracking-tight">Calendrier du Festival Evala 2025</h2>
+  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-6">
+    <div class="grid grid-cols-5 gap-4 mb-6">
+      <!-- Calendar Days -->
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-19">
+        <span class="text-2xl font-bold text-green-900">19</span>
+        <span class="text-xs text-green-700">Sam</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-20">
+        <span class="text-2xl font-bold text-green-900">20</span>
+        <span class="text-xs text-green-700">Dim</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-21">
+        <span class="text-2xl font-bold text-green-900">21</span>
+        <span class="text-xs text-green-700">Lun</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-22">
+        <span class="text-2xl font-bold text-green-900">22</span>
+        <span class="text-xs text-green-700">Mar</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-23">
+        <span class="text-2xl font-bold text-green-900">23</span>
+        <span class="text-xs text-green-700">Mer</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-24">
+        <span class="text-2xl font-bold text-green-900">24</span>
+        <span class="text-xs text-green-700">Jeu</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-25">
+        <span class="text-2xl font-bold text-green-900">25</span>
+        <span class="text-xs text-green-700">Ven</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-26">
+        <span class="text-2xl font-bold text-green-900">26</span>
+        <span class="text-xs text-green-700">Sam</span>
+      </button>
+      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-27">
+        <span class="text-2xl font-bold text-green-900">27</span>
+        <span class="text-xs text-green-700">Dim</span>
+      </button>
+    </div>
+    <div id="event-details" class="bg-green-50 rounded-xl p-5 shadow-inner text-center">
+      <div class="text-lg text-green-900 font-bold mb-2">Cliquez sur une date pour voir les événements</div>
+    </div>
+  </div>
+</main>
+<script>
+  // Simple event data
+  const events = {
+    "2025-07-19": {
+      title: "Ouverture Officielle du Festival",
+      time: "09:00",
+      place: "Stade de Kara",
+      desc: "Cérémonie d'ouverture avec parade, discours officiels et animations culturelles."
+    },
+    "2025-07-20": {
+      title: "Lutte Evala - Quartiers Nord",
+      time: "15:00",
+      place: "Arène de Lama",
+      desc: "Premiers combats de lutte traditionnelle entre les quartiers du nord de Kara."
+    },
+    "2025-07-21": {
+      title: "Journée des Initiés",
+      time: "Toute la journée",
+      place: "Quartiers participants",
+      desc: "Rituels et cérémonies pour les jeunes initiés dans les familles."
+    },
+    "2025-07-22": {
+      title: "Soirée Culturelle & Concert",
+      time: "19:00",
+      place: "Place des Fêtes",
+      desc: "Spectacles de danses, musiques traditionnelles et concert live avec artistes invités."
+    },
+    "2025-07-23": {
+      title: "Lutte Evala - Quartiers Sud",
+      time: "15:00",
+      place: "Arène de Pya",
+      desc: "Combats de lutte traditionnelle entre les quartiers du sud de Kara."
+    },
+    "2025-07-24": {
+      title: "Foire Artisanale & Gastronomique",
+      time: "10:00 - 20:00",
+      place: "Place du Marché",
+      desc: "Exposition et vente de produits artisanaux et spécialités locales."
+    },
+    "2025-07-25": {
+      title: "Défilé des Masques",
+      time: "17:00",
+      place: "Boulevard Central",
+      desc: "Défilé coloré des masques traditionnels et animations de rue."
+    },
+    "2025-07-26": {
+      title: "Grande Finale Evala",
+      time: "16:00",
+      place: "Arène Centrale",
+      desc: "Finale de la lutte Evala suivie de la remise des prix et clôture du festival."
+    },
+    "2025-07-27": {
+      title: "Journée de Clôture & Messe d’Action de Grâce",
+      time: "09:00",
+      place: "Cathédrale de Kara",
+      desc: "Messe d’action de grâce et cérémonie de clôture du festival."
+    }
+  };
+
+  document.querySelectorAll('.calendar-day').forEach(btn => {
+    btn.addEventListener('click', function() {
+      const date = this.getAttribute('data-date');
+      const event = events[date];
+      const details = document.getElementById('event-details');
+      if (event) {
+        details.innerHTML = `
+          <div class="text-xl font-bold text-green-900 mb-2">${event.title}</div>
+          <div class="text-green-700 font-semibold mb-1"><span class="font-bold">Heure:</span> ${event.time}</div>
+          <div class="text-green-700 font-semibold mb-1"><span class="font-bold">Lieu:</span> ${event.place}</div>
+          <div class="text-gray-700 mt-2">${event.desc}</div>
+        `;
+      } else {
+        details.innerHTML = '<div class="text-lg text-green-900 font-bold mb-2">Aucun événement ce jour.</div>';
+      }
+      // Highlight selected day
+      document.querySelectorAll('.calendar-day').forEach(b => b.classList.remove('ring-4', 'ring-green-400'));
+      this.classList.add('ring-4', 'ring-green-400');
+    });
+  });
+</script>
+
+ 
+<footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left: Tags/Links -->
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-0">
+      <a href="index.html" class="block hover:text-yellow-400 transition">A propos </a>
+      <a href="#" class="block hover:text-yellow-400 transition">Historique</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Calendrier</a>
+      <a href="#" class="block hover:text-yellow-400 transition">La Foire</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Les Evalous</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Contact</a>
+    </div>
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

@@ -1,92 +1,75 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evala 2025</title>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <head>
-    <style>
-      body, .header-nav {
-        font-family: 'Inter', Regular, sans-serif;
-      }
-      body {
-        /* Removed background color and gradient */
-        min-height: 100vh;
-      }
-      ::selection {
-        background: #6ee7b7;
-      }
-      /* Custom scrollbar for modern look */
-      ::-webkit-scrollbar {
-        width: 8px;
-        background: #bae6fd;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #34d399;
-        border-radius: 8px;
-      }
-      /* Hide scrollbar for mobile nav overlay */
-      .mobile-nav::-webkit-scrollbar {
-        display: none;
-      }
-
-
-
-   
-  /* Add this to your <head> or CSS file for fade effect */
-
-    
-  /* ...existing styles... */
-  header ul li:hover {
-    background: #dc2626; /* Tailwind's red-600 */
-    border-radius: 0.5rem;
-   
-    transition: background 0.2s;
-  }
-  header ul li a {
-    display: block;
-    font-size:13px;
-    color:white;
-    font-weight:none;
-    padding: 0.25rem 0.75rem;
-  }
-</style>
-      
-    </style>
-</head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evala 2025</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body, .header-nav {
+      font-family: 'Inter', Regular, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+    }
+    ::selection {
+      background: #6ee7b7;
+    }
+    ::-webkit-scrollbar {
+      width: 8px;
+      background: #bae6fd;
+    }
+    ::-webkit-scrollbar-thumb {
+      background: #34d399;
+      border-radius: 8px;
+    }
+    .mobile-nav::-webkit-scrollbar {
+      display: none;
+    }
+    header ul li:hover {
+      background: #dc2626;
+      border-radius: 0.5rem;
+      transition: background 0.2s;
+    }
+    header ul li a {
+      display: block;
+      font-size:13px;
+      color:white;
+      padding: 0.25rem 0.75rem;
+    }
+  </style>
 </head>
 <body>
-<header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-center px-2 md:px-8  ">
+<header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-center px-2 md:px-8">
   <!-- Left Nav -->
   <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
     <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">A propos</a></li>
     <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
   </ul>
   <!-- Logo Center -->
   <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
-  <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-  <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-  <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-  <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
-  <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-  <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-  <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-</span>
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
   <!-- Right Nav -->
   <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalos</a></li>
-    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
   </ul>
 </header>
 
-<!-- ...existing code... -->
 <!-- Mobile Nav Overlay -->
 <div id="mobile-nav" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-green-900 mobile-nav transition-all duration-300 translate-x-full md:hidden" style="display:none;">
   <button id="close-mobile-nav" class="absolute top-6 right-8 text-3xl text-green-800 hover:text-green-600">&times;</button>
@@ -99,104 +82,250 @@
   <a href="#" class="hover:text-green-600 transition">Les Evalos</a>
   <a href="kara_maps.html" class="hover:text-green-600 transition">Kara Maps</a>
 </div>
-<main class="">
- <div class="w-full max-w-full h-[650px] xs:h-[400px] sm:h-[450px] md:h-[950px] lg:h-[1000px] mt-0 md:mt-0 px-2 md:px-0 mx-auto relative overflow-hidden shadow-2xl bg-white/70 backdrop-blur flex flex-col md:flex-row">
-  <!-- Slider Track (Images + Texts) -->
-  <div class="absolute inset-0 flex transition-transform duration-700" id="slider-track">
-    <!-- Slide 1 -->
-    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="images/img3.jpeg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10   px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 max-w-[200vw] md:max-w-[1200px] text-center mx-auto">
-        <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-       Tradition respectée
-  <span class="font-extrabold" style=" background-color:#156c52; padding:7px ; color:#fff">   Valeurs & Courage</span>
-</h1>
-        <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
-          Découvrez la tradition, la force et la passion du plus grand festival du nord Togo.
-        </p>
+
+<main>
+  <div class="w-full max-w-full h-[650px] xs:h-[400px] sm:h-[450px] md:h-[950px] lg:h-[1000px] mt-0 md:mt-0 px-2 md:px-0 mx-auto relative overflow-hidden shadow-2xl bg-white/70 backdrop-blur flex flex-col md:flex-row">
+    <!-- Slider Track (Images + Texts) -->
+    <div class="absolute inset-0 flex transition-transform duration-700" id="slider-track">
+      <!-- Slide 1 -->
+      <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+        <img src="images/img3.jpeg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 max-w-[200vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
+            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+              Tradition respectée Valeurs & Courage
+            </span>
+          </h1>
+          <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
+            Découvrez la tradition, la force et la passion du plus grand festival du nord Togo.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 2 -->
+      <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+        <img src="images/img2.jpeg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
+            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+              Tradition respectée Valeurs & Courage
+            </span>
+          </h1>
+          <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
+            Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
+          </p>
+          <div class="flex flex-row items-center justify-center gap-4 mt-4">
+            <button class="hover:bg-red-700 font-bold py-2 px-5 rounded-lg shadow transition duration-200" style="background-color:#d21b33 ;color:#fff;">
+              Acheter Ticket
+            </button>
+            <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-5 rounded-lg shadow transition duration-200 relative overflow-hidden">
+              <span class="relative z-10">Voir Vidéos</span>
+              <span class="relative z-10">
+                <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                  <polygon points="6,4 16,10 6,16" />
+                </svg>
+              </span>
+              <span class="absolute inset-0 rounded-lg pointer-events-none" style="background: radial-gradient(circle at 70% 50%, #6ee7b7 0%, transparent 70%); opacity: 0.3;"></span>
+            </button>
+          </div>
+        </div>
+      </div>
+      <!-- Slide 3 -->
+      <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+        <img src="images/img1.jpeg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
+            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+              Tradition respectée Valeurs & Courage
+            </span>
+          </h1>
+          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+            Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 4 -->
+      <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+        <img src="images/img4.jpeg" alt="Slide 4" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
+            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+              Tradition respectée Valeurs & Courage
+            </span>
+          </h1>
+          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+            Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
+          </p>
+        </div>
+      </div>
+      <!-- Slide 5 -->
+      <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
+        <img src="https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-3060196/yas.tg/wp-content/uploads/2024/11/Capture-decran-2024-11-15-a-10.48.40-copy-1-scaled.webp" alt="Slide 5" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
+            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+              Tradition respectée Valeurs & Courage
+            </span>
+          </h1>
+          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+            Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
+          </p>
+        </div>
       </div>
     </div>
-    <!-- Slide 2 -->
-    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="images/img2.jpeg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10  px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl  max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-       <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-       Tradition respectée
-  <span class="font-extrabold" style=" background-color:#d21b33 ;color:#fff;">   Valeurs & Courage</span>
-</h1>
-       <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
-  Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
-</p>
-<div class="flex flex-row items-center justify-center gap-4 mt-4">
-  <button class=" hover:bg-red-700 font-bold py-2 px-5 rounded-lg shadow transition duration-200" style=" background-color:#d21b33 ;color:#fff;" >
-    Acheter Ticket
-  </button>
-  <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-5 rounded-lg shadow transition duration-200 relative overflow-hidden">
-    <span class="relative z-10">Voir Vidéos</span>
-    <span class="relative z-10">
-      <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
-        <polygon points="6,4 16,10 6,16" />
-      </svg>
-    </span>
-    <span class="absolute inset-0 rounded-lg pointer-events-none" style="background: radial-gradient(circle at 70% 50%, #6ee7b7 0%, transparent 70%); opacity: 0.3;"></span>
-  </button>
-</div>
-      </div>
-    </div>
-    <!-- Slide 3 -->
-    <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-      <img src="images/img1.jpeg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
-      <div class="relative z-10  px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl  max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-        <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-lg mb-4 leading-tight">
-       Tradition respectée
-  <span class="font-extrabold" style="color:#156c52;">   Valeurs & Courage</span>
-       </h1>
-        <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
-          Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
-        </p>
+    <!-- Slider Controls -->
+    <button id="prev" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">‹</button>
+    <button id="next" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">›</button>
+    <!-- Countdown inside slider, bottom center -->
+    <div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-20">
+      <div class="flex flex-row items-center gap-4 px-6 py-4 rounded-lg bg-transparent text-white font-bold text-lg shadow-lg">
+        <div class="flex flex-col items-center">
+          <span id="weeks" class="text-2xl md:text-3xl font-extrabold bg-blue-600 px-3 py-1 rounded-lg">0</span>
+          <span class="text-xs md:text-sm font-medium">Semaines</span>
+        </div>
+        <span class="text-2xl font-extrabold">:</span>
+        <div class="flex flex-col items-center">
+          <span id="days" class="text-2xl md:text-3xl font-extrabold bg-red-600 px-3 py-1 rounded-lg">0</span>
+          <span class="text-xs md:text-sm font-medium">Jours</span>
+        </div>
+        <span class="text-2xl font-extrabold">:</span>
+        <div class="flex flex-col items-center">
+          <span id="hours" class="text-2xl md:text-3xl font-extrabold bg-green-600 px-3 py-1 rounded-lg">0</span>
+          <span class="text-xs md:text-sm font-medium">Heures</span>
+        </div>
+        <span class="text-2xl font-extrabold">:</span>
+        <div class="flex flex-col items-center">
+          <span id="minutes" class="text-2xl md:text-3xl font-extrabold bg-yellow-400 text-gray-900 px-3 py-1 rounded-lg">0</span>
+          <span class="text-xs md:text-sm font-medium">Minutes</span>
+        </div>
+        <span class="text-2xl font-extrabold">:</span>
+        <div class="flex flex-col items-center">
+          <span id="seconds" class="text-2xl md:text-3xl font-extrabold bg-red-600 px-3 py-1 rounded-lg">0</span>
+          <span class="text-xs md:text-sm font-medium">Secondes</span>
+        </div>
       </div>
     </div>
   </div>
-  <!-- Slider Controls and Countdown remain unchanged -->
-  <!-- Slider Controls -->
-  <button id="prev" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2  bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">‹</button>
-  <button id="next" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2  bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">›</button>
-  <!-- Countdown inside slider, bottom center -->
-<div class="absolute bottom-2 left-1/2 -translate-x-1/2 z-20">
-  <div class="flex flex-row items-center gap-4 px-6 py-4 rounded-lg bg-transparent text-white font-bold text-lg shadow-lg">
-    <div class="flex flex-col items-center">
-      <span id="weeks" class="text-2xl md:text-3xl font-extrabold bg-blue-600 px-3 py-1 rounded-lg">0</span>
-      <span class="text-xs md:text-sm font-medium">Semaines</span>
-    </div>
-    <span class="text-2xl font-extrabold">:</span>
-    <div class="flex flex-col items-center">
-      <span id="days" class="text-2xl md:text-3xl font-extrabold bg-red-600 px-3 py-1 rounded-lg">0</span>
-      <span class="text-xs md:text-sm font-medium">Jours</span>
-    </div>
-    <span class="text-2xl font-extrabold">:</span>
-    <div class="flex flex-col items-center">
-      <span id="hours" class="text-2xl md:text-3xl font-extrabold bg-green-600 px-3 py-1 rounded-lg">0</span>
-      <span class="text-xs md:text-sm font-medium">Heures</span>
-    </div>
-    <span class="text-2xl font-extrabold">:</span>
-    <div class="flex flex-col items-center">
-      <span id="minutes" class="text-2xl md:text-3xl font-extrabold bg-yellow-400 text-gray-900 px-3 py-1 rounded-lg">0</span>
-      <span class="text-xs md:text-sm font-medium">Minutes</span>
-    </div>
-    <span class="text-2xl font-extrabold">:</span>
-    <div class="flex flex-col items-center">
-      <span id="seconds" class="text-2xl md:text-3xl font-extrabold bg-red-600 px-3 py-1 rounded-lg">0</span>
-      <span class="text-xs md:text-sm font-medium">Secondes</span>
-    </div>
-  </div>
-</div>
-
-
 </main>
-<!-- ...your existing HTML above... -->
-<!-- Add this before </body> -->
+
+<!-- Témoignages Slider -->
+<section class="w-full bg-gradient-to-br from-green-100 via-white to-green-50 py-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-900 tracking-tight">Témoignages</h2>
+  <div id="testimony-slider" class="overflow-x-auto flex gap-8 px-4 pb-4 scroll-smooth snap-x snap-mandatory mx-auto" style="margin-left:auto; margin-right:auto; max-width:1200px;">
+    <!-- Testimony Cards (as before) -->
+    <!-- ...cards code here... -->
+    <div class="min-w-[320px] max-w-xs bg-white rounded-2xl shadow-xl p-7 flex flex-col items-center hover:scale-105 hover:shadow-2xl transition-all duration-500 group snap-center">
+      <img src="https://images.unsplash.com/photo-1511367461989-f85a21fda167?auto=format&fit=facearea&w=256&q=80" alt="Kossi A." class="w-20 h-20 rounded-full object-cover mb-4 border-4 border-green-300 group-hover:border-green-500 transition" />
+      <div class="font-bold text-green-900 text-lg mb-1">Kossi A.</div>
+      <div class="text-xs text-green-700 font-semibold mb-2">Étudiant</div>
+      <div class="italic text-gray-600 text-center text-base">"Evala m'a permis de découvrir la vraie force de notre culture. Un moment inoubliable !"</div>
+    </div>
+    <!-- ...repeat for other cards... -->
+  </div>
+</section>
+
+<!-- Sponsors Slider -->
+<section class="w-full bg-gradient-to-br from-green-50 via-white to-green-100 py-12">
+  <h2 class="text-2xl md:text-3xl font-bold text-center mb-8 text-green-900">Nos Sponsors</h2>
+  <div id="sponsor-slider" class="overflow-x-auto flex gap-8 px-4 pb-4 scroll-smooth snap-x snap-mandatory mx-auto" style="margin-left:auto; margin-right:auto; max-width:900px;">
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="Coca-Cola" class="object-contain w-20 h-20" />
+    </div>
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="Orange" class="object-contain w-20 h-20" />
+    </div>
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="Togocom" class="object-contain w-20 h-20" />
+    </div>
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="MTN" class="object-contain w-20 h-20" />
+    </div>
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="ECOWAS" class="object-contain w-20 h-20" />
+    </div>
+    <div class="min-w-[120px] min-h-[120px] max-w-[120px] max-h-[120px] bg-white rounded-xl shadow-lg flex items-center justify-center snap-center hover:scale-105 transition-all duration-500">
+      <img src="images/LOGOEVALA.png" alt="UNICEF" class="object-contain w-20 h-20" />
+    </div>
+  </div>
+</section>
+
+
+
+<!-- Modal -->
+<div id="welcome-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" style="display: flex;">
+  <div class="bg-black rounded-xl shadow-2xl flex flex-col md:flex-row w-[95vw] max-w-2xl h-[90vh] md:h-[420px] overflow-hidden relative">
+    <button type="button" id="close-modal-x" class="absolute top-3 right-4 text-3xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+    <div class="hidden md:block md:w-1/2 bg-gray-100 flex items-center justify-center h-full">
+      <img src="images/img3.jpeg" alt="Festival Evala" class="object-cover w-full h-full max-h-full" />
+    </div>
+    <div class="w-full md:w-1/2 p-6 flex flex-col justify-center h-full">
+      <span class="mx-auto mb-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1 justify-center" style="font-family: 'Inter', system-ui, sans-serif;">
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+        <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      </span>
+      <h2 class="text-xl font-bold mb-2 text-white">Bienvenue à Evala 2025!</h2>
+      <p class="mb-4 text-gray-600 text-sm">Abonnez-vous pour recevoir les dernières actualités du festival.</p>
+      <form id="modal-form" class="flex flex-col gap-3">
+        <input type="email" id="modal-email" required placeholder="Votre email"
+          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-900 text-white placeholder-gray-300" />
+        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded transition">S'inscrire</button>
+      </form>
+      <button type="button" id="close-modal" class="mt-4 text-sm text-gray-400 hover:text-red-500 transition">Fermer</button>
+    </div>
+  </div>
+</div>
+
+<!-- Add this after the Sponsors Slider section, before the modal or script tags -->
+<section class="w-full bg-gradient-to-br from-green-100 via-white to-green-50 py-16">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-900 tracking-tight">Événements à venir</h2>
+  <div class="max-w-4xl mx-auto px-4">
+    <ul class="space-y-8">
+      <!-- Event 1 -->
+      <li class="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Ouverture Officielle du Festival</div>
+          <div class="text-sm text-green-700 font-semibold mb-1">19 Juillet 2025, 09:00 - Stade de Kara</div>
+          <div class="text-gray-600 text-base">Cérémonie d'ouverture avec parade, discours officiels et animations culturelles.</div>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
+      </li>
+      <!-- Event 2 -->
+      <li class="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Lutte Evala - Quartiers Nord</div>
+          <div class="text-sm text-green-700 font-semibold mb-1">20 Juillet 2025, 15:00 - Arène de Lama</div>
+          <div class="text-gray-600 text-base">Premiers combats de lutte traditionnelle entre les quartiers du nord de Kara.</div>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
+      </li>
+      <!-- Event 3 -->
+      <li class="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Soirée Culturelle & Concert</div>
+          <div class="text-sm text-green-700 font-semibold mb-1">22 Juillet 2025, 19:00 - Place des Fêtes</div>
+          <div class="text-gray-600 text-base">Spectacles de danses, musiques traditionnelles et concert live avec artistes invités.</div>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
+      </li>
+      <!-- Event 4 -->
+      <li class="bg-white rounded-2xl shadow-lg p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
+        <div>
+          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Grande Finale Evala</div>
+          <div class="text-sm text-green-700 font-semibold mb-1">26 Juillet 2025, 16:00 - Arène Centrale</div>
+          <div class="text-gray-600 text-base">Finale de la lutte Evala suivie de la remise des prix et clôture du festival.</div>
+        </div>
+        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
+      </li>
+    </ul>
+  </div>
+</section>
+
 <script>
-  // --- Countdown to 19 July 2025 ---
+  // Countdown to 19 July 2025
   function updateCountdown() {
     const now = new Date();
     const target = new Date('2025-07-19T00:00:00');
@@ -218,9 +347,7 @@
   updateCountdown();
   setInterval(updateCountdown, 1000);
 
-  // --- Slider with auto swap every 3 seconds (fade effect) ---
-  // 1. Add 'slide' class to each slide container in your HTML!
-  // 2. Add the fade CSS (see below)
+  // Main slider with fade effect
   const sliderTrack = document.getElementById('slider-track');
   const slides = sliderTrack.querySelectorAll('.relative.w-full.h-full.flex-shrink-0');
   slides.forEach(slide => slide.classList.add('slide'));
@@ -259,23 +386,57 @@
     startX = null;
   });
 
-  // Auto-slide every 3 seconds
+  // Auto-slide every 8 seconds
   let autoSlide = setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
-  }, 3000);
+  }, 8000);
 
   function resetAutoSlide() {
     clearInterval(autoSlide);
     autoSlide = setInterval(() => {
       current = (current + 1) % slides.length;
       showSlide(current);
-    }, 3000);
+    }, 8000);
   }
 
   // Initialize
   showSlide(current);
-</script>
 
-</body>
-</html>
+  // Modal logic
+  window.addEventListener('DOMContentLoaded', function() {
+    document.getElementById('close-modal').onclick = function() {
+      document.getElementById('welcome-modal').style.display = 'none';
+    };
+    document.getElementById('close-modal-x').onclick = function() {
+      document.getElementById('welcome-modal').style.display = 'none';
+    };
+    document.getElementById('modal-form').onsubmit = function(e) {
+      e.preventDefault();
+      document.getElementById('welcome-modal').style.display = 'none';
+      alert("Merci pour votre inscription !");
+    };
+  });
+
+  // Testimony slider auto-scroll every 3s
+  const testimonySlider = document.getElementById('testimony-slider');
+  let scrollIndex = 0;
+  const cards = testimonySlider.querySelectorAll('.min-w-\\[320px\\]');
+  function scrollToCard(idx) {
+    if (!cards[idx]) return;
+    cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'top', block: 'nearest' });
+  }
+  setInterval(() => {
+    scrollIndex = (scrollIndex + 1) % cards.length;
+    scrollToCard(scrollIndex);
+  }, 3000); 
+
+  // Sponsor slider auto-scroll every 8s
+  /* const sponsorSlider = document.getElementById('sponsor-slider');
+  const sponsorSquares = sponsorSlider.querySelectorAll('div.snap-center');
+  let sponsorIndex = 0;
+  setInterval(() => {
+    sponsorIndex = (sponsorIndex + 1) % sponsorSquares.length;
+    sponsorSquares[sponsorIndex].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
+  }, 8000); */
+</script>
