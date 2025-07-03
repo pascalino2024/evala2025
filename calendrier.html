@@ -88,133 +88,130 @@
   </ul>
 </header>
 
-
-<main class="pt-24 pb-32 bg-gradient-to-br from-green-50 via-white to-green-100 min-h-screen">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-900 tracking-tight">Calendrier du Festival Evala 2025</h2>
-  <div class="max-w-2xl mx-auto bg-white rounded-2xl shadow-lg p-6">
-    <div class="grid grid-cols-5 gap-4 mb-6">
-      <!-- Calendar Days -->
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-19">
-        <span class="text-2xl font-bold text-green-900">19</span>
-        <span class="text-xs text-green-700">Sam</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-20">
-        <span class="text-2xl font-bold text-green-900">20</span>
-        <span class="text-xs text-green-700">Dim</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-21">
-        <span class="text-2xl font-bold text-green-900">21</span>
-        <span class="text-xs text-green-700">Lun</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-22">
-        <span class="text-2xl font-bold text-green-900">22</span>
-        <span class="text-xs text-green-700">Mar</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-23">
-        <span class="text-2xl font-bold text-green-900">23</span>
-        <span class="text-xs text-green-700">Mer</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-24">
-        <span class="text-2xl font-bold text-green-900">24</span>
-        <span class="text-xs text-green-700">Jeu</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-25">
-        <span class="text-2xl font-bold text-green-900">25</span>
-        <span class="text-xs text-green-700">Ven</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-26">
-        <span class="text-2xl font-bold text-green-900">26</span>
-        <span class="text-xs text-green-700">Sam</span>
-      </button>
-      <button class="calendar-day bg-green-100 hover:bg-green-200 rounded-xl py-6 flex flex-col items-center transition" data-date="2025-07-27">
-        <span class="text-2xl font-bold text-green-900">27</span>
-        <span class="text-xs text-green-700">Dim</span>
-      </button>
+<main class="pt-24 pb-32 min-h-screen bg-gradient-to-br from-yellow-100 via-white to-green-50">
+  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-black tracking-tight">Calendrier du Festival Evala 2025</h2>
+  <div class="mx-auto w-[90%] bg-white rounded-2xl shadow-lg p-0 flex flex-col md:flex-row overflow-hidden border-4 border-black">
+    <!-- Left: Days List -->
+    <div class="bg-gradient-to-b from-yellow-300 via-red-500 to-green-400 md:w-1/4 w-full flex flex-row md:flex-col justify-between md:justify-start">
+      <ul id="days-list" class="w-full">
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-19">19 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-20">20 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-21">21 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-22">22 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-23">23 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-24">24 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-25">25 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition border-b border-black" data-date="2025-07-26">26 Juillet</button></li>
+        <li><button class="day-tab w-full text-left px-6 py-4 font-bold text-black hover:bg-yellow-200 focus:bg-white focus:text-red-600 transition" data-date="2025-07-27">27 Juillet</button></li>
+      </ul>
     </div>
-    <div id="event-details" class="bg-green-50 rounded-xl p-5 shadow-inner text-center">
-      <div class="text-lg text-green-900 font-bold mb-2">Cliquez sur une date pour voir les événements</div>
+    <!-- Right: Events Grid -->
+    <div class="flex-1 bg-white p-8" id="events-panel">
+      <div class="text-lg text-green-900 font-bold mb-2 text-center">Sélectionnez un jour pour voir les événements</div>
     </div>
   </div>
 </main>
 <script>
-  // Simple event data
-  const events = {
-    "2025-07-19": {
-      title: "Ouverture Officielle du Festival",
-      time: "09:00",
-      place: "Stade de Kara",
-      desc: "Cérémonie d'ouverture avec parade, discours officiels et animations culturelles."
-    },
-    "2025-07-20": {
-      title: "Lutte Evala - Quartiers Nord",
-      time: "15:00",
-      place: "Arène de Lama",
-      desc: "Premiers combats de lutte traditionnelle entre les quartiers du nord de Kara."
-    },
-    "2025-07-21": {
-      title: "Journée des Initiés",
-      time: "Toute la journée",
-      place: "Quartiers participants",
-      desc: "Rituels et cérémonies pour les jeunes initiés dans les familles."
-    },
-    "2025-07-22": {
-      title: "Soirée Culturelle & Concert",
-      time: "19:00",
-      place: "Place des Fêtes",
-      desc: "Spectacles de danses, musiques traditionnelles et concert live avec artistes invités."
-    },
-    "2025-07-23": {
-      title: "Lutte Evala - Quartiers Sud",
-      time: "15:00",
-      place: "Arène de Pya",
-      desc: "Combats de lutte traditionnelle entre les quartiers du sud de Kara."
-    },
-    "2025-07-24": {
-      title: "Foire Artisanale & Gastronomique",
-      time: "10:00 - 20:00",
-      place: "Place du Marché",
-      desc: "Exposition et vente de produits artisanaux et spécialités locales."
-    },
-    "2025-07-25": {
-      title: "Défilé des Masques",
-      time: "17:00",
-      place: "Boulevard Central",
-      desc: "Défilé coloré des masques traditionnels et animations de rue."
-    },
-    "2025-07-26": {
-      title: "Grande Finale Evala",
-      time: "16:00",
-      place: "Arène Centrale",
-      desc: "Finale de la lutte Evala suivie de la remise des prix et clôture du festival."
-    },
-    "2025-07-27": {
-      title: "Journée de Clôture & Messe d’Action de Grâce",
-      time: "09:00",
-      place: "Cathédrale de Kara",
-      desc: "Messe d’action de grâce et cérémonie de clôture du festival."
-    }
-  };
+// Event data: each day can have multiple events, each with a location and a map link
+const events = {
+  "2025-07-19": [
+    { title: "Ouverture Officielle du Festival", time: "09:00", place: "Stade de Kara", map: "https://maps.app.goo.gl/1Qw2e3StadeKara", desc: "Cérémonie d'ouverture avec parade, discours officiels et animations culturelles." },
+    { title: "Animations Jeunesse", time: "11:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé d'Ouverture", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques et participants." },
+    { title: "Concert d'Ouverture", time: "20:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Concert live avec artistes invités." }
+  ],
+  "2025-07-20": [
+    { title: "Lutte Evala - Quartiers Nord", time: "15:00", place: "Arène de Lama", map: "https://maps.app.goo.gl/2Wq3e4ArenaLama", desc: "Premiers combats de lutte traditionnelle entre les quartiers du nord de Kara." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Masques", time: "17:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/7Ui8e9Boulevard", desc: "Défilé coloré des masques traditionnels et animations de rue." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-21": [
+    { title: "Journée des Initiés", time: "Toute la journée", place: "Quartiers participants", map: "https://maps.app.goo.gl/3Er4e5Quartiers", desc: "Rituels et cérémonies pour les jeunes initiés dans les familles." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Initiés", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des jeunes initiés." },
+    { title: "Soirée des Initiés", time: "20:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée festive pour les initiés et leurs familles." }
+  ],
+  "2025-07-22": [
+    { title: "Soirée Culturelle & Concert", time: "19:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/4Rt5e6PlaceFetes", desc: "Spectacles de danses, musiques traditionnelles et concert live avec artistes invités." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Groupes", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-23": [
+    { title: "Lutte Evala - Quartiers Sud", time: "15:00", place: "Arène de Pya", map: "https://maps.app.goo.gl/5Ty6e7ArenaPya", desc: "Combats de lutte traditionnelle entre les quartiers du sud de Kara." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Masques", time: "17:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/7Ui8e9Boulevard", desc: "Défilé coloré des masques traditionnels et animations de rue." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-24": [
+    { title: "Foire Artisanale & Gastronomique", time: "10:00 - 20:00", place: "Place du Marché", map: "https://maps.app.goo.gl/6Yu7e8Marche", desc: "Exposition et vente de produits artisanaux et spécialités locales." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Groupes", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-25": [
+    { title: "Défilé des Masques", time: "17:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/7Ui8e9Boulevard", desc: "Défilé coloré des masques traditionnels et animations de rue." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Groupes", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-26": [
+    { title: "Grande Finale Evala", time: "16:00", place: "Arène Centrale", map: "https://maps.app.goo.gl/8Io9e0ArenaCentrale", desc: "Finale de la lutte Evala suivie de la remise des prix et clôture du festival." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Groupes", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ],
+  "2025-07-27": [
+    { title: "Journée de Clôture & Messe d’Action de Grâce", time: "09:00", place: "Cathédrale de Kara", map: "https://maps.app.goo.gl/9Op0e1Cathedrale", desc: "Messe d’action de grâce et cérémonie de clôture du festival." },
+    { title: "Animations Jeunesse", time: "10:00", place: "Maison des Jeunes", map: "https://maps.app.goo.gl/2Qw2e3MaisonJeunes", desc: "Jeux, ateliers et animations pour les enfants et jeunes." },
+    { title: "Marché Artisanal", time: "14:00", place: "Place du Marché", map: "https://maps.app.goo.gl/3Qw2e3Marche", desc: "Exposition et vente de produits artisanaux." },
+    { title: "Défilé des Groupes", time: "16:00", place: "Boulevard Central", map: "https://maps.app.goo.gl/4Qw2e3Boulevard", desc: "Défilé des groupes folkloriques." },
+    { title: "Soirée Dansante", time: "21:00", place: "Place des Fêtes", map: "https://maps.app.goo.gl/5Qw2e3Fetes", desc: "Soirée dansante avec DJ et groupes locaux." }
+  ]
+};
 
-  document.querySelectorAll('.calendar-day').forEach(btn => {
-    btn.addEventListener('click', function() {
-      const date = this.getAttribute('data-date');
-      const event = events[date];
-      const details = document.getElementById('event-details');
-      if (event) {
-        details.innerHTML = `
-          <div class="text-xl font-bold text-green-900 mb-2">${event.title}</div>
-          <div class="text-green-700 font-semibold mb-1"><span class="font-bold">Heure:</span> ${event.time}</div>
-          <div class="text-green-700 font-semibold mb-1"><span class="font-bold">Lieu:</span> ${event.place}</div>
-          <div class="text-gray-700 mt-2">${event.desc}</div>
-        `;
-      } else {
-        details.innerHTML = '<div class="text-lg text-green-900 font-bold mb-2">Aucun événement ce jour.</div>';
-      }
-      // Highlight selected day
-      document.querySelectorAll('.calendar-day').forEach(b => b.classList.remove('ring-4', 'ring-green-400'));
-      this.classList.add('ring-4', 'ring-green-400');
-    });
+// Tab logic for left-side days
+document.querySelectorAll('.day-tab').forEach(btn => {
+  btn.addEventListener('click', function() {
+    const date = this.getAttribute('data-date');
+    const dayEvents = events[date] || [];
+    const panel = document.getElementById('events-panel');
+    if (dayEvents.length > 0) {
+      panel.innerHTML = `
+        <div class="grid md:grid-cols-2 gap-6">
+          ${dayEvents.map(ev => `
+            <div class="rounded-xl border-2 border-black bg-gradient-to-br from-yellow-100 via-white to-green-50 p-6 shadow-lg flex flex-col justify-between">
+              <div>
+                <div class="text-2xl font-extrabold text-red-600 mb-2">${ev.title}</div>
+                <div class="text-green-800 font-semibold mb-1"><span class="font-bold">Heure:</span> ${ev.time}</div>
+                <div class="text-black font-semibold mb-1"><span class="font-bold">Lieu:</span> ${ev.place}</div>
+                <div class="text-gray-700 mt-2 mb-4">${ev.desc}</div>
+              </div>
+              <div class="flex gap-3 mt-2">
+                <button class="bg-yellow-400 hover:bg-yellow-500 text-black font-bold py-2 px-4 rounded shadow transition">Acheter ticket</button>
+                <a href="${ev.map}" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-2 px-4 rounded shadow transition flex items-center gap-1"><svg xmlns='http://www.w3.org/2000/svg' class='h-5 w-5 inline' fill='none' viewBox='0 0 24 24' stroke='currentColor'><path stroke-linecap='round' stroke-linejoin='round' stroke-width='2' d='M17.657 16.657L13.414 12.414a2 2 0 00-2.828 0l-4.243 4.243M15 11a3 3 0 11-6 0 3 3 0 016 0z' /></svg>Carte</a>
+              </div>
+            </div>
+          `).join('')}
+        </div>
+      `;
+    } else {
+      panel.innerHTML = '<div class="text-lg text-green-900 font-bold mb-2 text-center">Aucun événement ce jour.</div>';
+    }
+    // Highlight selected tab
+    document.querySelectorAll('.day-tab').forEach(b => b.classList.remove('bg-white', 'text-red-600', 'ring-4', 'ring-yellow-400'));
+    this.classList.add('bg-white', 'text-red-600', 'ring-4', 'ring-yellow-400');
   });
+});
 </script>
 
  
