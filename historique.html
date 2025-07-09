@@ -1,0 +1,171 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
+    </style>
+</head>
+</head>
+<body>
+<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
+  <!-- Left Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="index.html" class="text-green-100 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">La Foire</a></li>
+  </ul>
+  <!-- Logo Center -->
+  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
+  <!-- Right Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-100 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-100 font-semibold hover:text-green-300 transition">Contact</a></li>
+  </ul>
+</header>
+
+<main class="max-w-4xl mx-auto pt-[70px] pb-24 px-4">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-green-900 mb-8 text-center">Histoire des Evala au Togo</h1>
+  <article class="space-y-10 text-lg text-gray-800 leading-relaxed">
+    <section>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="images/img4.jpeg" alt="Lutte Evala" class="w-full md:w-1/3 rounded-xl shadow-lg object-cover" />
+        <div>
+          <h2 class="text-2xl font-bold text-green-800 mb-2">Origines et Signification</h2>
+          <p>
+            Les Evala sont une tradition ancestrale du peuple Kabyè, dans la région de la Kara au nord du Togo. Il s'agit d'un rituel d'initiation à l'âge adulte pour les jeunes hommes, marqué par des combats de lutte traditionnelle. 
+            Cette cérémonie, qui se déroule chaque année en juillet, symbolise le courage, la force et l'endurance, mais aussi l'appartenance à la communauté.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+        <img src="images/img1.jpeg" alt="Evala cérémonie" class="w-full md:w-1/3 rounded-xl shadow-lg object-cover" />
+        <div>
+          <h2 class="text-2xl font-bold text-green-800 mb-2">Déroulement du Festival</h2>
+          <p>
+            Le festival Evala dure une semaine et rassemble des milliers de participants et de spectateurs venus de tout le pays et de la diaspora. 
+            Les jeunes initiés, appelés "Evalou", sont préparés physiquement et mentalement par leurs familles et leurs quartiers. 
+            Les combats de lutte sont précédés de rituels, de marches et de cérémonies religieuses, puis suivis de festivités, de danses et de chants.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col md:flex-row items-center gap-6">
+        <img src="https://upload.wikimedia.org/wikipedia/commons/2/2d/Evala_Togo_2018.jpg" alt="Evala ambiance" class="w-full md:w-1/3 rounded-xl shadow-lg object-cover" />
+        <div>
+          <h2 class="text-2xl font-bold text-green-800 mb-2">Valeurs et Impact</h2>
+          <p>
+            Au-delà de la compétition, les Evala sont un moment de cohésion sociale, de transmission des valeurs et de renforcement de l'identité culturelle kabyè. 
+            Le festival attire également de nombreux touristes et contribue à la valorisation du patrimoine togolais.
+          </p>
+        </div>
+      </div>
+    </section>
+    <section>
+      <div class="flex flex-col md:flex-row-reverse items-center gap-6">
+        <img src="images/img2.jpeg" alt="Evala jeunes" class="w-full md:w-1/3 rounded-xl shadow-lg object-cover" />
+        <div>
+          <h2 class="text-2xl font-bold text-green-800 mb-2">Evala Aujourd'hui</h2>
+          <p>
+            Aujourd'hui, les Evala sont reconnues comme un événement national majeur au Togo, célébré par les autorités et suivi par les médias. 
+            La lutte Evala reste un symbole de bravoure, d'unité et de fierté pour toute la nation togolaise.
+          </p>
+        </div>
+      </div>
+    </section>
+  </article>
+</main>
+  
+
+<footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left: Tags/Links -->
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-0">
+      <a href="index.html" class="block hover:text-yellow-400 transition">A propos </a>
+      <a href="#" class="block hover:text-yellow-400 transition">Historique</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Calendrier</a>
+      <a href="#" class="block hover:text-yellow-400 transition">La Foire</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Les Evalous</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Contact</a>
+    </div>
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
