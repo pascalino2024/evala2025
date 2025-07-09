@@ -1,0 +1,242 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
+    </style>
+</head>
+</head>
+<body>
+<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
+  </ul>
+  <!-- Logo Center -->
+  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <a href="" > <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /> </a>
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
+  <!-- Right Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+  </ul>
+</header>
+
+<!-- Background image full width/height -->
+<div class="relative min-h-screen w-full">
+  <img src="images/img2.jpeg" alt="Foire Evala" class="fixed inset-0 w-full h-full object-cover object-center z-0" style="min-height:50vh; min-width:50vw;"/>
+  <div class="relative z-10 flex flex-col items-center   min-h-screen w-full bg-black/40">
+    <h1 class="text-4xl md:text-5xl font-extrabold mt-[200px] text-white drop-shadow-lg mb-2 mt-6 text-center">La Foire Evala 2025</h1>
+    <p class="text-lg md:text-xl text-white font-medium drop-shadow-md text-center max-w-2xl mb-2">
+      Découvrez les produits, saveurs et artisanats proposés pendant le festival Evala à Kara.
+    </p>
+    <!-- ...you can add more content here if needed... -->
+    <!-- Shop Slider at the bottom -->
+    <div class="absolute left-0 right-0 bottom-0 w-full pb-32">
+      <div class="w-full overflow-x-auto relative" style="scrollbar-width: none; -ms-overflow-style: none;">
+    <style>
+      #foire-slider::-webkit-scrollbar { display: none; }
+      #foire-slider { scrollbar-width: none; -ms-overflow-style: none; }
+    </style>
+        <button id="foire-prev" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white rounded-full p-2 shadow hover:bg-red-600 transition hidden md:block">&lt;</button>
+        <div id="foire-slider" class="flex gap-6 px-6 py-4 snap-x snap-mandatory overflow-x-auto scroll-smooth">
+          <!-- Stand 1 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/maize.jpg" alt="Stand Maïs Grillé" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Maïs Grillé</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Le meilleur maïs grillé du festival...</p>
+            <a href="shop.html?id=mais" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 2 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/sodabi.jpg" alt="Stand Sodabi" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Sodabi</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Liqueur artisanale locale à découvrir...</p>
+            <a href="shop.html?id=sodabi" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 3 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/bracelet.jpg" alt="Stand Bijoux" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Bijoux</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Bracelets artisanaux souvenirs uniques à offrir...</p>
+            <a href="shop.html?id=bijoux" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 4 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/tshirt.jpg" alt="Stand T-shirts" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand T-shirts</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">T-shirts officiels Evala toutes tailles couleurs...</p>
+            <a href="shop.html?id=tshirt" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 5 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/haricot.jpg" alt="Stand Haricot Bouilli" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Haricot Bouilli</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Haricots bouillis plats traditionnels et accompagnements...</p>
+            <a href="shop.html?id=haricot" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 6 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/masque.jpg" alt="Stand Masques" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Masques</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Masques traditionnels artisanat décoration locale...</p>
+            <a href="shop.html?id=masques" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 7 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/savon.jpg" alt="Stand Savons" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Savons</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Savons artisanaux base d’ingrédients locaux...</p>
+            <a href="shop.html?id=savons" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 8 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boisson.jpg" alt="Stand Boissons Fraîches" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Boissons Fraîches</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Jus naturels boissons locales rafraîchissements...</p>
+            <a href="shop.html?id=boissons" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 9 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/epices.jpg" alt="Stand Épices" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Épices</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Épices locales relever vos plats maison...</p>
+            <a href="shop.html?id=epices" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 10 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/pagne.jpg" alt="Stand Pagne Africain" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Pagne Africain</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Pagne tissus vêtements traditionnels africains colorés...</p>
+            <a href="shop.html?id=pagne" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 11 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/chaussures.jpg" alt="Stand Chaussures" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Chaussures</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Sandales chaussures artisanales accessoires pour tous...</p>
+            <a href="shop.html?id=chaussures" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 12 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/peinture.jpg" alt="Stand Peintures" class="w-32 h-32 object-cover rounded-lg mb-3" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Peintures</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Peintures œuvres d’art locales à découvrir...</p>
+            <a href="shop.html?id=peintures" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- ...existing code... -->
+        </div>
+        <button id="foire-next" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white rounded-full p-2 shadow hover:bg-red-600 transition hidden md:block">&gt;</button>
+      </div>
+    </div>
+  </div>
+</div>
+<footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left: Tags/Links -->
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-0">
+      <a href="index.html" class="block hover:text-yellow-400 transition">A propos </a>
+      <a href="#" class="block hover:text-yellow-400 transition">Historique</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Calendrier</a>
+      <a href="#" class="block hover:text-yellow-400 transition">La Foire</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Les Evalous</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Contact</a>
+    </div>
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
+<script>
+  // Simple slider for the shop cards
+  const slider = document.getElementById('foire-slider');
+  const prevBtn = document.getElementById('foire-prev');
+  const nextBtn = document.getElementById('foire-next');
+  if (slider && prevBtn && nextBtn) {
+    prevBtn.style.display = 'block';
+    nextBtn.style.display = 'block';
+    prevBtn.onclick = () => {
+      slider.scrollBy({ left: -320, behavior: 'smooth' });
+    };
+    nextBtn.onclick = () => {
+      slider.scrollBy({ left: 320, behavior: 'smooth' });
+    };
+    // Auto-slide every 6 seconds
+    setInterval(() => {
+      slider.scrollBy({ left: 320, behavior: 'smooth' });
+    }, 3000);
+  }
+</script>
+</body>
+</html>

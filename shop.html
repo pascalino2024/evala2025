@@ -1,0 +1,184 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
+    </style>
+</head>
+</head>
+<body>
+<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
+  </ul>
+  <!-- Logo Center -->
+  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <a href="" > <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /> </a>
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
+  <!-- Right Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+  </ul>
+</header>
+<div class="w-full h-[270px] md:h-[270px] relative flex items-center justify-center mb-10">
+  <img src="images/img3.jpeg" alt="Blog Banner" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="filter: brightness(0.55);" />
+  <div class="relative z-10 flex flex-col items-center justify-center w-full h-full">
+    <img src="images/maize.jpg" alt="Shop Logo" class="w-24 h-24 rounded-full border-4 border-white shadow-lg mb-3 object-cover" />
+    <h1 class="text-2xl md:text-3xl font-extrabold text-white mb-2 drop-shadow-lg">Stand Maïs Grillé</h1>
+    <p class="text-white text-center max-w-xl text-base md:text-lg drop-shadow-md">
+      Découvrez notre stand : spécialités de maïs grillé, ambiance conviviale et produits locaux à savourer pendant le festival Evala !
+    </p>
+  </div>
+</div>
+
+<main class="max-w-6xl mx-auto px-4 py-10">
+  <h1 class="text-3xl md:text-4xl font-extrabold text-green-900 mb-8 text-center">Produits du Stand</h1>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-8">
+    <!-- Product 1 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/maize.jpg" alt="Maïs grillé" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Maïs grillé</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Délicieux maïs grillé du festival.</p>
+      <span class="font-bold text-red-600 mb-2">200 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20du%20maïs%20grillé" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 2 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/sodabi.jpg" alt="Sodabi" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Sodabi</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Liqueur locale artisanale à découvrir.</p>
+      <span class="font-bold text-red-600 mb-2">500 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20du%20sodabi" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 3 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/bracelet.jpg" alt="Bracelet artisanal" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Bracelet artisanal</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Bijoux faits main, souvenirs uniques.</p>
+      <span class="font-bold text-red-600 mb-2">1 000 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20un%20bracelet%20artisanal" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 4 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/tshirt.jpg" alt="T-shirt Evala" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">T-shirt Evala</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">T-shirt officiel du festival, toutes tailles.</p>
+      <span class="font-bold text-red-600 mb-2">3 000 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20un%20t-shirt%20Evala" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 5 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/haricot.jpg" alt="Haricot bouilli" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Haricot bouilli</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Plat populaire, riche en énergie.</p>
+      <span class="font-bold text-red-600 mb-2">300 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20du%20haricot%20bouilli" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 6 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/masque.jpg" alt="Masque traditionnel" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Masque traditionnel</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Artisanat local, symbole de la culture.</p>
+      <span class="font-bold text-red-600 mb-2">5 000 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20un%20masque%20traditionnel" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+    <!-- Product 7 -->
+    <div class="bg-white rounded-xl shadow-lg p-4 flex flex-col items-center">
+      <img src="images/peinture.jpg" alt="Peinture locale" class="w-32 h-32 object-cover rounded-lg mb-3" />
+      <h2 class="font-bold text-lg text-green-900 mb-1">Peinture locale</h2>
+      <p class="text-gray-700 text-sm mb-2 text-center">Œuvre d’art locale à découvrir.</p>
+      <span class="font-bold text-red-600 mb-2">10 000 FCFA</span>
+      <a href="https://wa.me/22890001122?text=Je%20veux%20commander%20une%20peinture%20locale" target="_blank" class="bg-green-600 hover:bg-green-700 text-white font-bold py-1 px-3 rounded text-sm transition">Commander par WhatsApp</a>
+    </div>
+  </div>
+</main>
+<footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left: Tags/Links -->
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-0">
+      <a href="index.html" class="block hover:text-yellow-400 transition">A propos </a>
+      <a href="#" class="block hover:text-yellow-400 transition">Historique</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Calendrier</a>
+      <a href="#" class="block hover:text-yellow-400 transition">La Foire</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Les Evalous</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Contact</a>
+    </div>
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>

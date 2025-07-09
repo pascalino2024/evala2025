@@ -171,7 +171,7 @@
       </div>
       <!-- Slide 4 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-        <img src="images/img4.jpeg" alt="Slide 4" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <img src="images/img4.jpg" alt="Slide 4" class="w-full h-full object-cover border-0 absolute inset-0" />
         <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
           <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
             <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
@@ -185,7 +185,7 @@
       </div>
       <!-- Slide 5 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
-        <img src="https://cdn-ilcckdn.nitrocdn.com/mJCoEvGkeejlEvJdEMQjiBVdPamvpGSY/assets/images/optimized/rev-3060196/yas.tg/wp-content/uploads/2024/11/Capture-decran-2024-11-15-a-10.48.40-copy-1-scaled.webp" alt="Slide 5" class="w-full h-full object-cover border-0 absolute inset-0" />
+        <img src="images/img6.jpg" alt="Slide 5" class="w-full h-full object-cover border-0 absolute inset-0" />
         <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
           <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
             <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
@@ -202,7 +202,7 @@
     <button id="prev" class="absolute left-2 md:left-4 top-1/2 -translate-y-1/2 bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">‹</button>
     <button id="next" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">›</button>
     <!-- Place the MacBook effect list here, where the countdown was -->
-    <div class="absolute bottom-8 left-1/2 -translate-x-1/2 z-20">
+    <div class="absolute bottom-50 left-1/2 -translate-x-1/2 z-20">
       <ul class="flex gap-10">
         <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Témoignages">
           <!-- Testimony Icon -->
@@ -232,90 +232,33 @@
         </li>
       </ul>
     </div>
+    <!-- Audio Player -->
+    <div class="absolute left-0 right-0 bottom-0 z-30 w-full">
+      <div class="w-full px-0 py-0 flex items-center justify-center">
+        <div class="w-full  shadow-2xl overflow-hidden">
+          <div class="">
+            <div class="bg-white/90  flex items-center px-4 py-2 gap-4">
+              <img src="images/LOGOEVALA.png" alt="Evala Audio" class="h-10 w-10 rounded-full shadow-lg border-2 border-white bg-white" />
+              <div class="flex-1">
+                <div class="text-sm font-bold text-gray-800 mb-1">Ambiance Evala 2025</div>
+                <audio controls class="w-full rounded-lg bg-white" style="outline: none; box-shadow: none;">
+                  <source src="audio/evala-theme.mp3" type="audio/mpeg">
+                  Votre navigateur ne supporte pas la lecture audio.
+                </audio>
+              </div>
+              <span class="ml-2 text-xs text-gray-700 font-semibold hidden md:inline">🎵 Festival Evala 2025</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
   </div>
 </main>
 
-
-
-<!-- Modal -->
-<div id="welcome-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 backdrop-blur-sm" style="display: flex;">
-  <div class="bg-black rounded-xl shadow-2xl flex flex-col md:flex-row w-[95vw] max-w-2xl h-[90vh] md:h-[420px] overflow-hidden relative">
-    <button type="button" id="close-modal-x" class="absolute top-3 right-4 text-3xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
-    <div class="hidden md:block md:w-1/2 bg-gray-100 flex items-center justify-center h-full">
-      <img src="images/img3.jpeg" alt="Festival Evala" class="object-cover w-full h-full max-h-full" />
-    </div>
-    <div class="w-full md:w-1/2 p-6 flex flex-col justify-center h-full">
-      <span class="mx-auto mb-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1 justify-center" style="font-family: 'Inter', system-ui, sans-serif;">
-        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-        <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" />
-        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-      </span>
-      <h2 class="text-xl font-bold mb-2 text-white">Bienvenue à Evala 2025!</h2>
-      <p class="mb-4 text-gray-600 text-sm">Abonnez-vous pour recevoir les dernières actualités du festival.</p>
-      <form id="modal-form" class="flex flex-col gap-3">
-        <input type="email" id="modal-email" required placeholder="Votre email"
-          class="border border-gray-300 rounded px-3 py-2 focus:outline-none focus:ring-2 focus:ring-green-400 bg-gray-900 text-white placeholder-gray-300" />
-        <button type="submit" class="bg-green-600 hover:bg-green-700 text-white font-semibold py-2 rounded transition">S'inscrire</button>
-      </form>
-      <button type="button" id="close-modal" class="mt-4 text-sm text-gray-400 hover:text-red-500 transition">Fermer</button>
-    </div>
-  </div>
-</div>
-
-<!-- Add this after the Sponsors Slider section, before the modal or script tags -->
-<section class="w-full py-16">
-  <h2 class="text-3xl md:text-4xl font-extrabold text-center mb-10 text-green-900 tracking-tight">Événements à venir</h2>
-  <div class="max-w-4xl mx-auto px-4">
-    <ul class="space-y-8">
-      <!-- Event 1 -->
-      <li class="bg-white p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Ouverture Officielle du Festival</div>
-          <div class="text-sm text-green-700 font-semibold mb-1">19 Juillet 2025, 09:00 - Stade de Kara</div>
-          <div class="text-gray-600 text-base">Cérémonie d'ouverture avec parade, discours officiels et animations culturelles.</div>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
-      </li>
-      <!-- Event 2 -->
-      <li class="bg-white p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Lutte Evala - Quartiers Nord</div>
-          <div class="text-sm text-green-700 font-semibold mb-1">20 Juillet 2025, 15:00 - Arène de Lama</div>
-          <div class="text-gray-600 text-base">Premiers combats de lutte traditionnelle entre les quartiers du nord de Kara.</div>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
-      </li>
-      <!-- Event 3 -->
-      <li class="bg-white p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Soirée Culturelle & Concert</div>
-          <div class="text-sm text-green-700 font-semibold mb-1">22 Juillet 2025, 19:00 - Place des Fêtes</div>
-          <div class="text-gray-600 text-base">Spectacles de danses, musiques traditionnelles et concert live avec artistes invités.</div>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
-      </li>
-      <!-- Event 4 -->
-      <li class="bg-white p-6 flex flex-col md:flex-row md:items-center md:justify-between gap-4">
-        <div>
-          <div class="text-lg md:text-xl font-bold text-green-900 mb-1">Grande Finale Evala</div>
-          <div class="text-sm text-green-700 font-semibold mb-1">26 Juillet 2025, 16:00 - Arène Centrale</div>
-          <div class="text-gray-600 text-base">Finale de la lutte Evala suivie de la remise des prix et clôture du festival.</div>
-        </div>
-        <button class="bg-red-600 hover:bg-red-700 text-white font-semibold px-6 py-2 rounded-lg shadow transition">Acheter Ticket</button>
-      </li>
-    </ul>
-  </div>
-</section>
-
 <script>
-  // Main slider with fade effect
+  // Slider logic for fade effect
   const sliderTrack = document.getElementById('slider-track');
   const slides = sliderTrack.querySelectorAll('.relative.w-full.h-full.flex-shrink-0');
-  slides.forEach(slide => slide.classList.add('slide'));
   let current = 0;
 
   function showSlide(idx) {
@@ -355,59 +298,18 @@
   let autoSlide = setInterval(() => {
     current = (current + 1) % slides.length;
     showSlide(current);
-  }, 8000);
+  }, 3000);
 
   function resetAutoSlide() {
     clearInterval(autoSlide);
     autoSlide = setInterval(() => {
       current = (current + 1) % slides.length;
       showSlide(current);
-    }, 8000);
+    }, 3000);
   }
 
   // Initialize
   showSlide(current);
-
-  // Modal logic
-  window.addEventListener('DOMContentLoaded', function() {
-    // Check if user already subscribed
-    if (localStorage.getItem('evala_subscribed') === '1') {
-      document.getElementById('welcome-modal').style.display = 'none';
-    }
-
-    document.getElementById('close-modal').onclick = function() {
-      document.getElementById('welcome-modal').style.display = 'none';
-    };
-    document.getElementById('close-modal-x').onclick = function() {
-      document.getElementById('welcome-modal').style.display = 'none';
-    };
-    document.getElementById('modal-form').onsubmit = function(e) {
-      e.preventDefault();
-      document.getElementById('welcome-modal').style.display = 'none';
-      localStorage.setItem('evala_subscribed', '1');
-      alert("Merci pour votre inscription !");
-    };
-  });
-
-  // Testimony slider auto-scroll every 3s
-  const testimonySlider = document.getElementById('testimony-slider');
-  let scrollIndex = 0;
-  const cards = testimonySlider.querySelectorAll('.min-w-\\[320px\\]');
-  function scrollToCard(idx) {
-    if (!cards[idx]) return;
-    cards[idx].scrollIntoView({ behavior: 'smooth', inline: 'top', block: 'nearest' });
-  }
-  setInterval(() => {
-    scrollIndex = (scrollIndex + 1) % cards.length;
-    scrollToCard(scrollIndex);
-  }, 3000); 
-
-  // Sponsor slider auto-scroll every 8s
-  /* const sponsorSlider = document.getElementById('sponsor-slider');
-  const sponsorSquares = sponsorSlider.querySelectorAll('div.snap-center');
-  let sponsorIndex = 0;
-  setInterval(() => {
-    sponsorIndex = (sponsorIndex + 1) % sponsorSquares.length;
-    sponsorSquares[sponsorIndex].scrollIntoView({ behavior: 'smooth', inline: 'center', block: 'nearest' });
-  }, 8000); */
 </script>
+</body>
+</html>
