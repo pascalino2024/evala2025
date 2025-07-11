@@ -1,0 +1,120 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Evala 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f7fafc; }
+    .sidebar-link { transition: background 0.2s, color 0.2s; }
+    .sidebar-link:hover, .sidebar-link.active { background: #dc2626; color: #fff; }
+    .slider-img-thumb { width: 60px; height: 40px; object-fit: cover; border-radius: 0.5rem; }
+  </style>
+</head>
+<body>
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-black text-white flex flex-col py-8 px-4">
+    <!-- ...existing code... -->
+    <nav class="flex-1 flex flex-col gap-2">
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold active">Dashboard</a>
+      <a href="#slider-crud" class="sidebar-link px-4 py-2 rounded font-semibold">CRUD Slider Images</a>
+      <!-- ...existing code... -->
+    </nav>
+  </aside>
+  <!-- Main Content -->
+  <main class="flex-1 p-8 bg-gray-50">
+    <h1 class="text-2xl font-bold mb-6 text-gray-800">Bienvenue sur le tableau de bord Admin</h1>
+    <!-- Slider CRUD Section -->
+    <section id="slider-crud" class="bg-white rounded-xl shadow p-6 flex flex-col mb-8">
+      <h2 class="font-bold text-lg mb-3 text-red-700">CRUD Slider Images</h2>
+      <!-- Add New Slider Form -->
+      <form id="add-slider-form" class="flex flex-col md:flex-row gap-3 mb-4">
+        <input type="file" id="slider-image" accept="image/*" class="border rounded px-3 py-2" required />
+        <input type="text" id="slider-title" placeholder="Titre du slider" class="border rounded px-3 py-2" required />
+        <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded font-semibold">Ajouter</button>
+      </form>
+      <!-- Slider List -->
+      <ul id="slider-list" class="flex flex-col gap-2">
+        <!-- Slider items will be rendered here -->
+      </ul>
+    </section>
+    <!-- ...existing code for other admin features... -->
+  </main>
+</div>
+<script>
+  // Simple in-memory slider data
+  let sliders = [
+    { id: 1, title: "Image 1", img: "images/img1.jpeg" },
+    { id: 2, title: "Image 2", img: "images/img2.jpeg" }
+  ];
+  let sliderIdCounter = sliders.length + 1;
+
+  function renderSliders() {
+    const list = document.getElementById('slider-list');
+    list.innerHTML = '';
+    sliders.forEach(slider => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${slider.img}" alt="${slider.title}" class="slider-img-thumb" />
+          <span class="font-semibold">${slider.title}</span>
+        </div>
+        <div class="flex gap-2">
+          <button class="edit-slider bg-blue-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Edit</button>
+          <button class="delete-slider bg-red-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Delete</button>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+    // Attach edit/delete events
+    document.querySelectorAll('.delete-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        sliders = sliders.filter(s => s.id !== id);
+        renderSliders();
+      };
+    });
+    document.querySelectorAll('.edit-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const slider = sliders.find(s => s.id === id);
+        if (!slider) return;
+        const newTitle = prompt("Modifier le titre du slider :", slider.title);
+        if (newTitle !== null && newTitle.trim() !== "") {
+          slider.title = newTitle.trim();
+          renderSliders();
+        }
+      };
+    });
+  }
+
+  // Add new slider
+  document.getElementById('add-slider-form').onsubmit = function(e) {
+    e.preventDefault();
+    const fileInput = document.getElementById('slider-image');
+    const titleInput = document.getElementById('slider-title');
+    const file = fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      sliders.push({
+        id: sliderIdCounter++,
+        title: titleInput.value,
+        img: evt.target.result // base64 image
+      });
+      renderSliders();
+      fileInput.value = '';
+      titleInput.value = '';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Initial render
+  renderSliders();
+</script>
+</body>
+</html>

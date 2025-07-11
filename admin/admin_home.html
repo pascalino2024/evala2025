@@ -1,0 +1,1157 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Evala 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f7fafc; }
+    .sidebar-link { transition: background 0.2s, color 0.2s; }
+    .sidebar-link:hover, .sidebar-link.active { background: #462E01; color: #fff; }
+    .stat-card { background: #fff; border-radius: 1rem; box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07); }
+    .stat-icon { width: 48px; height: 48px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; }
+    .slider-img-thumb { width: 60px; height: 40px; object-fit: cover; border-radius: 0.5rem; }
+  </style>
+</head>
+<body>
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-[#C8AD7F] text-white flex flex-col py-8 px-4">
+    <div class="flex items-center gap-2 mb-8">
+      <img src="images/LOGOEVALA.png" alt="Admin Logo" class="h-10 w-10 rounded-full bg-white" />
+      <span class="text-xl font-extrabold tracking-tight">Admin Evala</span>
+    </div>
+    <nav class="flex-1 flex flex-col gap-2">
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold active">Dashboard</a>
+      <a href="slider.html" class="sidebar-link px-4 py-2 rounded font-semibold">Slider</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Inscrire Evalos</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Nouvelle Boutique</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Nouveau Post</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Événement / Calendrier</a>
+       <a href="../index.html" class="sidebar-link px-4 py-2 rounded font-semibold">Visiter Evala.tg</a>
+       <a href="" class="sidebar-link px-4 py-2 rounded font-semibold">Gallery</a>
+      <a href="#" id="logout-link" class="sidebar-link px-4 py-2 rounded font-semibold text-red-400 hover:bg-black hover:text-white">Log out</a>
+    </nav>
+  </aside>
+  <!-- Main Content -->
+  <main class="flex-1 p-8 bg-gray-50">
+    <h1 class="text-2xl font-bold mb-6 text-gray-800">Bienvenue sur le tableau de bord Admin</h1>
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 mb-10">
+      <!-- Stat 1: Visitors -->
+      <div class="stat-card flex items-center gap-4 p-6">
+        <div class="stat-icon bg-green-100 text-green-700">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M17 20h5v-2a4 4 0 00-3-3.87M9 20H4v-2a4 4 0 013-3.87M16 3.13a4 4 0 010 7.75M8 3.13a4 4 0 000 7.75" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">0</div>
+          <div class="text-gray-500 text-sm">Visiteurs</div>
+        </div>
+      </div>
+      <!-- Stat 2: Boutiques -->
+      <div class="stat-card flex items-center gap-4 p-6">
+        <div class="stat-icon bg-yellow-100 text-yellow-700">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M3 7h18M5 7V5a2 2 0 012-2h10a2 2 0 012 2v2m-1 0v10a2 2 0 01-2 2H7a2 2 0 01-2-2V7m5 4h4" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">0</div>
+          <div class="text-gray-500 text-sm">Boutiques inscrites</div>
+        </div>
+      </div>
+      <!-- Stat 3: Blog Posts -->
+      <div class="stat-card flex items-center gap-4 p-6">
+        <div class="stat-icon bg-blue-100 text-blue-700">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <path d="M19 21H5a2 2 0 01-2-2V7a2 2 0 012-2h4l2-2h6a2 2 0 012 2v12a2 2 0 01-2 2z" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">0</div>
+          <div class="text-gray-500 text-sm">Articles Blog</div>
+        </div>
+      </div>
+      <!-- Stat 4: Events -->
+      <div class="stat-card flex items-center gap-4 p-6">
+        <div class="stat-icon bg-red-100 text-red-700">
+          <svg class="w-8 h-8" fill="none" stroke="currentColor" stroke-width="2" viewBox="0 0 24 24">
+            <rect width="18" height="14" x="3" y="5" rx="2"/>
+            <path d="M16 3v4M8 3v4M3 9h18" />
+          </svg>
+        </div>
+        <div>
+          <div class="text-3xl font-bold">0</div>
+          <div class="text-gray-500 text-sm">Événements à venir</div>
+        </div>
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <div class="stat-card p-6">
+        <div class="text-lg font-bold mb-2 text-gray-700">Derniers visiteurs</div>
+        
+        <table class="w-full text-sm text-gray-700">
+          <thead>
+            <tr class="text-left border-b">
+              <th class="py-2">Téléphone</th>
+              <th class="py-2">Date</th>
+              <th class="py-2">Heure</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-1">+228 90 12 34 56</td>
+              <td class="py-1">2024-06-10</td>
+              <td class="py-1">14:23</td>
+            </tr>
+            <tr>
+              <td class="py-1">+228 91 22 11 00</td>
+              <td class="py-1">2024-06-10</td>
+              <td class="py-1">13:58</td>
+            </tr>
+            <tr>
+              <td class="py-1">+228 98 77 66 55</td>
+              <td class="py-1">2024-06-10</td>
+              <td class="py-1">13:45</td>
+            </tr>
+            <tr>
+              <td class="py-1">+228 99 88 77 66</td>
+              <td class="py-1">2024-06-10</td>
+              <td class="py-1">13:30</td>
+            </tr>
+          </tbody>
+           
+        </table>
+      </div>
+      
+      <div class="stat-card p-6">
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-lg font-bold text-gray-700">Boutiques populaires</div>
+          <button id="add-boutique-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-semibold ml-2">Ajouter nouvelle Boutique</button>
+        </div>
+        <table class="w-full text-sm text-gray-700 mb-4">
+          <thead>
+            <tr class="text-left border-b">
+              <th class="py-2">Nom</th>
+              <th class="py-2">Catégorie</th>
+              <th class="py-2">Ventes</th>
+              <th class="py-2"></th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td class="py-1">Stand Maïs Grillé</td>
+              <td class="py-1">Alimentation</td>
+              <td class="py-1">120</td>
+              <td class="py-1 flex gap-1">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold voir-produits-btn" data-boutique="maïs">Voir les produits</button>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-xs font-semibold info-boutique-btn" data-boutique="maïs" type="button">Info Boutique</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-1">Stand Sodabi</td>
+              <td class="py-1">Boissons</td>
+              <td class="py-1">98</td>
+              <td class="py-1 flex gap-1">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold voir-produits-btn" data-boutique="sodabi">Voir les produits</button>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-xs font-semibold info-boutique-btn" data-boutique="sodabi" type="button">Info Boutique</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-1">Stand Bijoux</td>
+              <td class="py-1">Artisanat</td>
+              <td class="py-1">87</td>
+              <td class="py-1 flex gap-1">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold voir-produits-btn" data-boutique="bijoux">Voir les produits</button>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-xs font-semibold info-boutique-btn" data-boutique="bijoux" type="button">Info Boutique</button>
+              </td>
+            </tr>
+            <tr>
+              <td class="py-1">Stand T-shirts</td>
+              <td class="py-1">Textile</td>
+              <td class="py-1">76</td>
+              <td class="py-1 flex gap-1">
+                <button class="bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold voir-produits-btn" data-boutique="tshirts">Voir les produits</button>
+                <button class="bg-yellow-600 hover:bg-yellow-700 text-white px-3 py-1 rounded text-xs font-semibold info-boutique-btn" data-boutique="tshirts" type="button">Info Boutique</button>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </div>
+    <br>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- Slider CRUD Section (half width) -->
+      <section id="slider-crud" class="bg-white rounded-xl shadow p-6 flex flex-col mb-8">
+        <h2 class="font-bold text-lg mb-3 text-red-700">CRUD Slider Images</h2>
+        <form id="add-slider-form" class="flex flex-col md:flex-row gap-3 mb-4">
+          <input type="file" id="slider-image" accept="image/*" class="border rounded px-3 py-2 " style="width: 250px;" required />
+          <input type="text" id="slider-title" placeholder="Titre du slider" class="border rounded px-3 py-2" required />
+          <button type="submit" class="bg-green-600 text-white px-4 py-2 rounded font-semibold">Ajouter</button>
+        </form>
+        <ul id="slider-list" class="flex flex-col gap-2">
+          <!-- Slider items will be rendered here -->
+        </ul>
+      </section>
+      <!-- Gallery Images CRUD Section -->
+      <section id="gallery-crud" class="bg-white rounded-xl shadow p-6 flex flex-col mb-8">
+        <h2 class="font-bold text-lg mb-3 text-red-700">CRUD Galerie d'images</h2>
+        <form id="add-gallery-form" class="flex flex-col md:flex-row gap-3 mb-4">
+          <input type="file" id="gallery-image" accept="image/*" class="border rounded px-3 py-2" required />
+          <button type="submit" class="bg-blue-600 text-white px-4 py-2 rounded font-semibold">Ajouter une image</button>
+        </form>
+        <ul id="gallery-list" class="flex flex-col gap-2">
+          <!-- Gallery images will be rendered here -->
+        </ul>
+      </section>
+      <!-- Gallery Zoom Modal -->
+      <div id="gallery-zoom-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/80 transition-opacity duration-200 opacity-0 pointer-events-none">
+        <img id="gallery-zoom-img" src="" alt="Zoom" class="rounded-full w-96 h-96 object-cover shadow-2xl border-8 border-white" />
+      </div>
+    </div>
+    <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
+      <!-- New Post Card (like boutiques populaires) -->
+      <div class="stat-card p-6">
+        <div class="flex items-center justify-between mb-2">
+          <div class="text-lg font-bold text-gray-700">Nouveaux posts</div>
+          <button id="add-post-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-3 py-1 rounded text-xs font-semibold ml-2">Ajouter un post</button>
+        </div>
+        <table class="w-full text-sm text-gray-700 mb-4">
+          <thead>
+            <tr class="text-left border-b">
+              <th class="py-2">Titre</th>
+              <th class="py-2">Auteur</th>
+              <th class="py-2">Date</th>
+              <th class="py-2"></th>
+            </tr>
+          </thead>
+          <tbody id="post-list">
+            <!-- Blog posts will be rendered here -->
+          </tbody>
+        </table>
+      </div>
+      <!-- Blog Post Edit Modal -->
+      <div id="post-edit-modal" class="fixed inset-0 z-50 flex items-stretch justify-center bg-black/80 transition-opacity duration-200 opacity-0 pointer-events-none">
+        <div class="bg-white w-full h-full flex flex-row relative">
+          <div class="w-full md:w-1/2 p-10 flex flex-col justify-center">
+            <h2 class="text-2xl font-bold mb-6 text-red-700">Modifier le post</h2>
+            <form id="edit-post-form" class="flex flex-col gap-4">
+              <input type="text" id="edit-post-title" class="border rounded px-3 py-2" placeholder="Titre du post" required />
+              <input type="text" id="edit-post-author" class="border rounded px-3 py-2" placeholder="Auteur" required />
+              <input type="date" id="edit-post-date" class="border rounded px-3 py-2" required />
+              <textarea id="edit-post-content" class="border rounded px-3 py-2 h-40" placeholder="Contenu du post" required></textarea>
+              <div class="flex flex-col gap-2">
+                <label class="font-semibold text-gray-700">Images du post (max 3):</label>
+                <input type="file" id="edit-post-img1" accept="image/*" class="border rounded px-3 py-2" />
+                <input type="file" id="edit-post-img2" accept="image/*" class="border rounded px-3 py-2" />
+                <input type="file" id="edit-post-img3" accept="image/*" class="border rounded px-3 py-2" />
+                <div class="flex gap-2 mt-2">
+                  <img id="edit-post-img1-preview" src="" alt="" class="w-16 h-16 rounded object-cover border" style="display:none;" />
+                  <img id="edit-post-img2-preview" src="" alt="" class="w-16 h-16 rounded object-cover border" style="display:none;" />
+                  <img id="edit-post-img3-preview" src="" alt="" class="w-16 h-16 rounded object-cover border" style="display:none;" />
+                </div>
+              </div>
+              <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold">Enregistrer</button>
+            </form>
+          </div>
+          <div class="hidden md:block w-1/2 bg-gray-100 p-10 overflow-auto">
+            <h3 class="text-xl font-bold mb-4 text-gray-700">Aperçu</h3>
+            <div id="edit-post-preview" class="prose max-w-none"></div>
+          </div>
+          <button id="close-post-edit-modal" class="absolute top-4 right-8 text-3xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+        </div>
+      </div>
+      <!-- Update Success Modal -->
+      <div id="update-success-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 transition-opacity duration-200 opacity-0 pointer-events-none">
+        <div class="bg-white rounded-xl shadow-2xl w-full max-w-xs p-8 flex flex-col items-center">
+          <h3 class="text-xl font-bold text-green-700 mb-4">Mise à jour réussie !</h3>
+          <button id="close-update-success-modal" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold mt-4">OK</button>
+        </div>
+      </div>
+    </div>
+    <!-- Product Modal -->
+    <div id="products-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-3xl p-8 relative">
+        <button id="close-products-modal" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+        <h3 id="products-modal-title" class="text-2xl font-bold text-red-700 mb-6"></h3>
+        <ul id="products-list" class="flex flex-col gap-4"></ul>
+      </div>
+    </div>
+    <!-- Update Product Modal -->
+    <div id="update-product-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative">
+        <button id="close-update-product-modal" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+        <h3 class="text-xl font-bold text-red-700 mb-4">Modifier le produit</h3>
+        <form id="update-product-form" class="flex flex-col gap-4">
+          <div class="flex flex-col items-center gap-2">
+            <img id="update-product-img" src="" alt="Produit" class="w-24 h-24 rounded-full border-4 border-red-600 object-cover shadow mb-2" />
+            <input type="file" id="update-product-img-input" accept="image/*" class="border rounded px-3 py-2" />
+          </div>
+          <input type="text" id="update-product-name" class="border rounded px-3 py-2" placeholder="Nom du produit" required />
+          <input type="text" id="update-product-price" class="border rounded px-3 py-2" placeholder="Prix" required />
+          <button type="submit" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">Enregistrer</button>
+        </form>
+      </div>
+    </div>
+    <!-- Add Boutique Modal -->
+    <div id="add-boutique-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative">
+        <button id="close-add-boutique-modal" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+        <h3 class="text-xl font-bold text-red-700 mb-4">Ajouter une nouvelle boutique</h3>
+        <form id="add-boutique-form" class="flex flex-col gap-4">
+          <input type="text" id="boutique-nom" class="border rounded px-3 py-2" placeholder="Nom de la boutique" required />
+          <input type="text" id="boutique-categorie" class="border rounded px-3 py-2" placeholder="Catégorie" required />
+          <input type="number" id="boutique-ventes" class="border rounded px-3 py-2" placeholder="Nombre de ventes" min="0" required />
+          <input type="file" id="boutique-img" accept="image/*" class="border rounded px-3 py-2" />
+          <textarea id="boutique-description" class="border rounded px-3 py-2" placeholder="Description"></textarea>
+          <button type="submit" class="bg-green-600 hover:bg-green-700 text-white px-4 py-2 rounded font-semibold">Ajouter</button>
+        </form>
+      </div>
+    </div>
+    <!-- Logout Modal -->
+    <div id="logout-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-xl shadow-2xl w-full max-w-xs p-8 relative flex flex-col items-center">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Se déconnecter ?</h3>
+        <p class="text-gray-700 mb-6 text-center">Êtes-vous sûr de vouloir vous déconnecter ?</p>
+        <div class="flex gap-4">
+          <button id="logout-confirm" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold">Oui</button>
+          <button id="logout-cancel" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded font-semibold">Non</button>
+        </div>
+      </div>
+    </div>
+    <!-- Info Boutique Modal -->
+    <div id="info-boutique-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-2xl shadow-2xl w-full max-w-md p-8 relative">
+        <button id="close-info-boutique-modal" class="absolute top-3 right-4 text-2xl text-gray-400 hover:text-red-500 transition z-20" aria-label="Fermer">&times;</button>
+        <h3 class="text-xl font-bold text-red-700 mb-4">Informations sur la boutique</h3>
+        <div id="info-boutique-content" class="mb-6">
+          <!-- Boutique info will be rendered here -->
+        </div>
+        <div class="flex gap-3">
+          <button id="update-boutique-btn" class="bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded font-semibold">Mettre à jour</button>
+          <button id="delete-boutique-btn" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold">Supprimer</button>
+        </div>
+      </div>
+    </div>
+    <!-- Delete Confirmation Modal -->
+    <div id="delete-confirm-modal" class="fixed inset-0 z-50 flex items-center justify-center bg-black/60 transition-opacity duration-200 opacity-0 pointer-events-none">
+      <div class="bg-white rounded-xl shadow-2xl w-full max-w-xs p-8 relative flex flex-col items-center">
+        <h3 class="text-xl font-bold text-red-700 mb-4">Confirmer la suppression</h3>
+        <p class="text-gray-700 mb-6 text-center">Êtes-vous sûr de vouloir supprimer cet élément ?</p>
+        <div class="flex gap-4">
+          <button id="delete-confirm-yes" class="bg-red-600 hover:bg-red-700 text-white px-4 py-2 rounded font-semibold">Oui</button>
+          <button id="delete-confirm-no" class="bg-gray-300 hover:bg-gray-400 text-gray-800 px-4 py-2 rounded font-semibold">Non</button>
+        </div>
+      </div>
+    </div>
+    <!-- ...existing code for other admin features... -->
+  </main>
+</div>
+<script>
+  // Simple in-memory slider data
+  let sliders = [
+    { id: 1, title: "Image 1", img: "images/img1.jpeg" },
+    { id: 2, title: "Image 2", img: "images/img2.jpeg" }
+  ];
+  let sliderIdCounter = sliders.length + 1;
+
+  function renderSliders() {
+    const list = document.getElementById('slider-list');
+    list.innerHTML = '';
+    sliders.forEach(slider => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${slider.img}" alt="${slider.title}" class="slider-img-thumb" />
+          <span class="font-semibold">${slider.title}</span>
+        </div>
+        <div class="flex gap-2">
+          <button class="edit-slider bg-blue-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Edit</button>
+          <button class="delete-slider bg-red-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Delete</button>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+    // Attach edit/delete events
+    document.querySelectorAll('.delete-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          sliders = sliders.filter(s => s.id !== id);
+          renderSliders();
+        });
+      };
+    });
+    document.querySelectorAll('.edit-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const slider = sliders.find(s => s.id === id);
+        if (!slider) return;
+        const newTitle = prompt("Modifier le titre du slider :", slider.title);
+        if (newTitle !== null && newTitle.trim() !== "") {
+          slider.title = newTitle.trim();
+          renderSliders();
+        }
+      };
+    });
+  }
+
+  // Add new slider
+  document.getElementById('add-slider-form').onsubmit = function(e) {
+    e.preventDefault();
+    const fileInput = document.getElementById('slider-image');
+    const titleInput = document.getElementById('slider-title');
+    const file = fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      sliders.push({
+        id: sliderIdCounter++,
+        title: titleInput.value,
+        img: evt.target.result // base64 image
+      });
+      renderSliders();
+      fileInput.value = '';
+      titleInput.value = '';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Initial render
+  renderSliders();
+
+  // Example products data per boutique (add img for demo)
+  const productsData = {
+    "maïs": [
+      { id: 1, name: "Maïs grillé simple", price: "200 FCFA", img: "images/maize.jpg" },
+      { id: 2, name: "Maïs grillé épicé", price: "250 FCFA", img: "images/maize.jpg" }
+    ],
+    "sodabi": [
+      { id: 1, name: "Sodabi nature", price: "500 FCFA", img: "images/sodabi.jpg" },
+      { id: 2, name: "Sodabi aromatisé", price: "700 FCFA", img: "images/sodabi.jpg" }
+    ],
+    "bijoux": [
+      { id: 1, name: "Bracelet artisanal", price: "1 000 FCFA", img: "images/bracelet.jpg" },
+      { id: 2, name: "Collier perles", price: "2 000 FCFA", img: "images/bracelet.jpg" }
+    ],
+    "tshirts": [
+      { id: 1, name: "T-shirt Evala S", price: "3 000 FCFA", img: "images/tshirt.jpg" },
+      { id: 2, name: "T-shirt Evala M", price: "3 000 FCFA", img: "images/tshirt.jpg" },
+      { id: 3, name: "T-shirt Evala L", price: "3 000 FCFA", img: "images/tshirt.jpg" }
+    ]
+  };
+
+  // Modal logic
+  document.querySelectorAll('.voir-produits-btn').forEach(btn => {
+    btn.onclick = function() {
+      const boutique = this.dataset.boutique;
+      const products = productsData[boutique] || [];
+      const modal = document.getElementById('products-modal');
+      const list = document.getElementById('products-list');
+      const title = document.getElementById('products-modal-title');
+      title.textContent = "Produits du stand " + this.closest('tr').children[0].textContent;
+      list.innerHTML = '';
+      products.forEach(product => {
+        const li = document.createElement('li');
+        li.className = "flex items-center justify-between bg-gray-100 rounded-xl px-4 py-3";
+        li.innerHTML = `
+          <div class="flex items-center gap-4">
+            <img src="${product.img || 'images/LOGOEVALA.png'}" alt="${product.name}" class="w-16 h-16 rounded-full border-4 border-red-600 object-cover shadow" />
+            <div>
+              <span class="font-semibold">${product.name}</span>
+              <span class="ml-2 text-gray-600">${product.price}</span>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button class="update-product bg-blue-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Update</button>
+            <button class="delete-product bg-red-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Delete</button>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+      modal.style.opacity = "1";
+      modal.style.pointerEvents = "auto";
+
+      // Attach update/delete events
+      list.querySelectorAll('.delete-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          showDeleteConfirmModal(() => {
+            productsData[b] = productsData[b].filter(p => p.id !== id);
+            document.querySelector(`.voir-produits-btn[data-boutique="${b}"]`).click();
+          });
+        };
+      });
+      list.querySelectorAll('.update-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          const prod = productsData[b].find(p => p.id === id);
+          if (!prod) return;
+          // Fill update modal
+          document.getElementById('update-product-name').value = prod.name;
+          document.getElementById('update-product-price').value = prod.price;
+          document.getElementById('update-product-img').src = prod.img || 'images/LOGOEVALA.png';
+          document.getElementById('update-product-form').dataset.boutique = b;
+          document.getElementById('update-product-form').dataset.id = id;
+          document.getElementById('update-product-modal').style.opacity = "1";
+          document.getElementById('update-product-modal').style.pointerEvents = "auto";
+        };
+      });
+    };
+  });
+
+  document.getElementById('close-products-modal').onclick = function() {
+    const modal = document.getElementById('products-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('products-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  // Update product modal logic
+  document.getElementById('close-update-product-modal').onclick = function() {
+    const modal = document.getElementById('update-product-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('update-product-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  document.getElementById('update-product-img-input').onchange = function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      document.getElementById('update-product-img').src = evt.target.result;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  document.getElementById('update-product-form').onsubmit = function(e) {
+    e.preventDefault();
+    const b = this.dataset.boutique;
+    const id = Number(this.dataset.id);
+    const prod = productsData[b].find(p => p.id === id);
+    if (!prod) return;
+    prod.name = document.getElementById('update-product-name').value;
+    prod.price = document.getElementById('update-product-price').value;
+    prod.img = document.getElementById('update-product-img').src;
+    document.getElementById('update-product-modal').style.opacity = "0";
+    document.getElementById('update-product-modal').style.pointerEvents = "none";
+    // Refresh products modal
+    document.querySelector(`.voir-produits-btn[data-boutique="${b}"]`).click();
+  };
+
+  document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('products-modal');
+    const updateModal = document.getElementById('update-product-modal');
+    if (modal.style.opacity === "1" && (e.key === "Escape" || e.key === "Esc")) {
+      modal.style.opacity = "0";
+      modal.style.pointerEvents = "none";
+    }
+    if (updateModal.style.opacity === "1" && (e.key === "Escape" || e.key === "Esc")) {
+      updateModal.style.opacity = "0";
+      updateModal.style.pointerEvents = "none";
+    }
+  });
+
+  // Add Boutique Modal logic
+  document.getElementById('add-boutique-btn').onclick = function() {
+    const modal = document.getElementById('add-boutique-modal');
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+  };
+  document.getElementById('close-add-boutique-modal').onclick = function() {
+    const modal = document.getElementById('add-boutique-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('add-boutique-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+  document.getElementById('add-boutique-form').onsubmit = function(e) {
+    e.preventDefault();
+    // Here you would handle the new boutique data (e.g., add to a list, send to server, etc.)
+    // For demo, just close the modal
+    document.getElementById('add-boutique-modal').style.opacity = "0";
+    document.getElementById('add-boutique-modal').style.pointerEvents = "none";
+    // Optionally reset the form
+    this.reset();
+    alert('Nouvelle boutique ajoutée !');
+  };
+
+  // Logout modal logic
+  document.getElementById('logout-link').onclick = function(e) {
+    e.preventDefault();
+    const modal = document.getElementById('logout-modal');
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+  };
+  document.getElementById('logout-cancel').onclick = function() {
+    const modal = document.getElementById('logout-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('logout-confirm').onclick = function() {
+    window.location.href = "../login.html";
+  };
+  document.getElementById('logout-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  // Gallery images data (demo)
+  let galleryImages = [
+    { id: 1, src: "images/img1.jpeg" },
+    { id: 2, src: "images/img2.jpeg" },
+    { id: 3, src: "images/img3.jpeg" }
+  ];
+  let galleryIdCounter = galleryImages.length + 1;
+
+  function renderGallery() {
+    const gallery = document.getElementById('gallery-list');
+    if (!gallery) return;
+    gallery.innerHTML = '';
+    galleryImages.forEach(img => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${img.src}" alt="Gallery" class="w-16 h-16 object-cover rounded-full border-4 border-blue-400 shadow cursor-pointer gallery-zoom-trigger" data-src="${img.src}" />
+        </div>
+        <button class="delete-gallery bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${img.id}">Supprimer</button>
+      `;
+      gallery.appendChild(li);
+    });
+    gallery.querySelectorAll('.delete-gallery').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          galleryImages = galleryImages.filter(img => img.id !== id);
+          renderGallery();
+        });
+      };
+    });
+    gallery.querySelectorAll('.gallery-zoom-trigger').forEach(imgEl => {
+      imgEl.onclick = function() {
+        const modal = document.getElementById('gallery-zoom-modal');
+        const zoomImg = document.getElementById('gallery-zoom-img');
+        zoomImg.src = this.dataset.src;
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+      };
+    });
+  }
+
+  // Add gallery image logic (form)
+  document.getElementById('add-gallery-form').onsubmit = function(e) {
+    e.preventDefault();
+    const fileInput = document.getElementById('gallery-image');
+    const file = fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      galleryImages.push({
+        id: galleryIdCounter++,
+        src: evt.target.result
+      });
+      renderGallery();
+      fileInput.value = '';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Gallery zoom modal logic
+  document.getElementById('gallery-zoom-modal').onclick = function(e) {
+    if (e.target === this || e.target === document.getElementById('gallery-zoom-img')) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  };
+
+  // Blog posts data (demo)
+  let blogPosts = [
+    { id: 1, title: "Evala 2025: Lancement", author: "Admin", date: "2024-06-10", content: "Contenu du lancement d'Evala 2025...", images: [] },
+    { id: 2, title: "Programme officiel", author: "Equipe", date: "2024-06-09", content: "Voici le programme officiel...", images: [] },
+    { id: 3, title: "Galerie photos", author: "Admin", date: "2024-06-08", content: "Découvrez la galerie photos...", images: [] }
+  ];
+
+  function renderPosts() {
+    const tbody = document.getElementById('post-list');
+    tbody.innerHTML = '';
+    blogPosts.forEach(post => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="py-1">${post.title}</td>
+        <td class="py-1">${post.author}</td>
+        <td class="py-1">${post.date}</td>
+        <td class="py-1">
+          <button class="voir-post bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${post.id}">Voir</button>
+          <button class="delete-post bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${post.id}">Delete</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+    tbody.querySelectorAll('.voir-post').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const post = blogPosts.find(p => p.id === id);
+        if (!post) return;
+        // Fill form
+        document.getElementById('edit-post-title').value = post.title;
+        document.getElementById('edit-post-author').value = post.author;
+        document.getElementById('edit-post-date').value = post.date;
+        document.getElementById('edit-post-content').value = post.content;
+        document.getElementById('edit-post-form').dataset.id = id;
+        document.getElementById('edit-post-preview').innerText = post.content;
+        // Fill images preview
+        for (let i = 1; i <= 3; i++) {
+          const img = post.images && post.images[i-1] ? post.images[i-1] : "";
+          const imgPreview = document.getElementById(`edit-post-img${i}-preview`);
+          imgPreview.src = img || "";
+          imgPreview.style.display = img ? "block" : "none";
+          document.getElementById(`edit-post-img${i}`).value = "";
+        }
+        // Show modal
+        const modal = document.getElementById('post-edit-modal');
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+      };
+    });
+    tbody.querySelectorAll('.delete-post').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          blogPosts = blogPosts.filter(p => p.id !== id);
+          renderPosts();
+        });
+      };
+    });
+  }
+
+  // Blog post images preview logic
+  for (let i = 1; i <= 3; i++) {
+    document.getElementById(`edit-post-img${i}`).onchange = function(e) {
+      const file = e.target.files[0];
+      const preview = document.getElementById(`edit-post-img${i}-preview`);
+      if (!file) {
+        preview.src = "";
+        preview.style.display = "none";
+        return;
+      }
+      const reader = new FileReader();
+      reader.onload = function(evt) {
+        preview.src = evt.target.result;
+        preview.style.display = "block";
+      };
+      reader.readAsDataURL(file);
+    };
+  }
+
+  // Edit post form logic
+  document.getElementById('edit-post-form').onsubmit = function(e) {
+    e.preventDefault();
+    const id = Number(this.dataset.id);
+    const post = blogPosts.find(p => p.id === id);
+    if (!post) return;
+    post.title = document.getElementById('edit-post-title').value;
+    post.author = document.getElementById('edit-post-author').value;
+    post.date = document.getElementById('edit-post-date').value;
+    post.content = document.getElementById('edit-post-content').value;
+    // Save images
+    post.images = [];
+    for (let i = 1; i <= 3; i++) {
+      const imgSrc = document.getElementById(`edit-post-img${i}-preview`).src;
+      if (imgSrc && imgSrc.startsWith("data:")) {
+        post.images.push(imgSrc);
+      }
+    }
+    renderPosts();
+    document.getElementById('post-edit-modal').style.opacity = "0";
+    document.getElementById('post-edit-modal').style.pointerEvents = "none";
+    // Show update success modal
+    const successModal = document.getElementById('update-success-modal');
+    successModal.style.opacity = "1";
+    successModal.style.pointerEvents = "auto";
+  };
+
+  document.getElementById('close-post-edit-modal').onclick = function() {
+    const modal = document.getElementById('post-edit-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('post-edit-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  document.getElementById('close-update-success-modal').onclick = function() {
+    const modal = document.getElementById('update-success-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('update-success-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  // Live preview for post content
+  document.getElementById('edit-post-content').oninput = function() {
+    document.getElementById('edit-post-preview').innerText = this.value;
+  };
+
+  // Initial render
+  renderPosts();
+
+  // Demo boutiques info data
+  const boutiquesInfo = {
+    "maïs": {
+      nom: "Stand Maïs Grillé",
+      categorie: "Alimentation",
+      ventes: 120,
+      owner: "Kossi Mawuli",
+      location: "Marché central, Kara",
+      phone: "+228 90 11 22 33",
+      description: "Spécialité de maïs grillé, épicé ou nature."
+    },
+    "sodabi": {
+      nom: "Stand Sodabi",
+      categorie: "Boissons",
+      ventes: 98,
+      owner: "Afi Sodabi",
+      location: "Rue des Fêtes, Kara",
+      phone: "+228 91 22 33 44",
+      description: "Sodabi nature et aromatisé, production locale."
+    },
+    "bijoux": {
+      nom: "Stand Bijoux",
+      categorie: "Artisanat",
+      ventes: 87,
+      owner: "Yawa Bijoux",
+      location: "Place artisanale, Kara",
+      phone: "+228 92 33 44 55",
+      description: "Bijoux artisanaux faits main, perles et cuir."
+    },
+    "tshirts": {
+      nom: "Stand T-shirts",
+      categorie: "Textile",
+      ventes: 76,
+      owner: "Kodjo Textile",
+      location: "Boulevard du Textile, Kara",
+      phone: "+228 93 44 55 66",
+      description: "T-shirts Evala toutes tailles et couleurs."
+    }
+  };
+
+  // Info Boutique Modal logic
+  function attachInfoBoutiqueEvents() {
+    document.querySelectorAll('.info-boutique-btn').forEach(btn => {
+      btn.onclick = function() {
+        const boutique = this.dataset.boutique;
+        const info = boutiquesInfo[boutique];
+        if (!info) return;
+        const content = `
+          <div class="mb-2"><span class="font-semibold">Nom:</span> ${info.nom}</div>
+          <div class="mb-2"><span class="font-semibold">Catégorie:</span> ${info.categorie}</div>
+          <div class="mb-2"><span class="font-semibold">Ventes:</span> ${info.ventes}</div>
+          <div class="mb-2"><span class="font-semibold">Propriétaire:</span> ${info.owner}</div>
+          <div class="mb-2"><span class="font-semibold">Téléphone:</span> ${info.phone}</div>
+          <div class="mb-2"><span class="font-semibold">Localisation:</span> ${info.location}</div>
+          <div class="mb-2"><span class="font-semibold">Description:</span> ${info.description}</div>
+        `;
+        document.getElementById('info-boutique-content').innerHTML = content;
+        document.getElementById('update-boutique-btn').dataset.boutique = boutique;
+        document.getElementById('delete-boutique-btn').dataset.boutique = boutique;
+        const modal = document.getElementById('info-boutique-modal');
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+      };
+    });
+  }
+
+  // Call after DOM is ready and after any render that might add .info-boutique-btn
+  attachInfoBoutiqueEvents();
+
+  document.getElementById('close-info-boutique-modal').onclick = function() {
+    const modal = document.getElementById('info-boutique-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('info-boutique-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+  document.getElementById('update-boutique-btn').onclick = function() {
+    alert('Fonction de mise à jour à implémenter.');
+  };
+  document.getElementById('delete-boutique-btn').onclick = function() {
+    const boutique = this.dataset.boutique;
+    showDeleteConfirmModal(() => {
+      alert('Fonction de suppression à implémenter pour la boutique: ' + boutique);
+      // You can implement actual deletion logic here if needed
+      document.getElementById('info-boutique-modal').style.opacity = "0";
+      document.getElementById('info-boutique-modal').style.pointerEvents = "none";
+    });
+  };
+
+  // Delete confirmation modal logic
+  let deleteAction = null;
+  function showDeleteConfirmModal(action) {
+    deleteAction = action;
+    const modal = document.getElementById('delete-confirm-modal');
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+  }
+  document.getElementById('delete-confirm-no').onclick = function() {
+    const modal = document.getElementById('delete-confirm-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+    deleteAction = null;
+  };
+  document.getElementById('delete-confirm-yes').onclick = function() {
+    if (typeof deleteAction === "function") deleteAction();
+    const modal = document.getElementById('delete-confirm-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+    deleteAction = null;
+  };
+  document.getElementById('delete-confirm-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+      deleteAction = null;
+    }
+  });
+
+  // --- Slider delete button ---
+  function renderSliders() {
+    const list = document.getElementById('slider-list');
+    list.innerHTML = '';
+    sliders.forEach(slider => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${slider.img}" alt="${slider.title}" class="slider-img-thumb" />
+          <span class="font-semibold">${slider.title}</span>
+        </div>
+        <div class="flex gap-2">
+          <button class="edit-slider bg-blue-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Edit</button>
+          <button class="delete-slider bg-red-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Delete</button>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+    document.querySelectorAll('.delete-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          sliders = sliders.filter(s => s.id !== id);
+          renderSliders();
+        });
+      };
+    });
+    document.querySelectorAll('.edit-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const slider = sliders.find(s => s.id === id);
+        if (!slider) return;
+        const newTitle = prompt("Modifier le titre du slider :", slider.title);
+        if (newTitle !== null && newTitle.trim() !== "") {
+          slider.title = newTitle.trim();
+          renderSliders();
+        }
+      };
+    });
+  }
+
+  // --- Product delete button ---
+  document.querySelectorAll('.voir-produits-btn').forEach(btn => {
+    btn.onclick = function() {
+      const boutique = this.dataset.boutique;
+      const products = productsData[boutique] || [];
+      const modal = document.getElementById('products-modal');
+      const list = document.getElementById('products-list');
+      const title = document.getElementById('products-modal-title');
+      title.textContent = "Produits du stand " + this.closest('tr').children[0].textContent;
+      list.innerHTML = '';
+      products.forEach(product => {
+        const li = document.createElement('li');
+        li.className = "flex items-center justify-between bg-gray-100 rounded-xl px-4 py-3";
+        li.innerHTML = `
+          <div class="flex items-center gap-4">
+            <img src="${product.img || 'images/LOGOEVALA.png'}" alt="${product.name}" class="w-16 h-16 rounded-full border-4 border-red-600 object-cover shadow" />
+            <div>
+              <span class="font-semibold">${product.name}</span>
+              <span class="ml-2 text-gray-600">${product.price}</span>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button class="update-product bg-blue-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Update</button>
+            <button class="delete-product bg-red-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Delete</button>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+      modal.style.opacity = "1";
+      modal.style.pointerEvents = "auto";
+
+      // Attach update/delete events
+      list.querySelectorAll('.delete-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          showDeleteConfirmModal(() => {
+            productsData[b] = productsData[b].filter(p => p.id !== id);
+            document.querySelector(`.voir-produits-btn[data-boutique="${b}"]`).click();
+          });
+        };
+      });
+      list.querySelectorAll('.update-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          const prod = productsData[b].find(p => p.id === id);
+          if (!prod) return;
+          // Fill update modal
+          document.getElementById('update-product-name').value = prod.name;
+          document.getElementById('update-product-price').value = prod.price;
+          document.getElementById('update-product-img').src = prod.img || 'images/LOGOEVALA.png';
+          document.getElementById('update-product-form').dataset.boutique = b;
+          document.getElementById('update-product-form').dataset.id = id;
+          document.getElementById('update-product-modal').style.opacity = "1";
+          document.getElementById('update-product-modal').style.pointerEvents = "auto";
+        };
+      });
+    };
+  });
+
+  // --- Gallery delete button ---
+  function renderGallery() {
+    const gallery = document.getElementById('gallery-list');
+    if (!gallery) return;
+    gallery.innerHTML = '';
+    galleryImages.forEach(img => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${img.src}" alt="Gallery" class="w-16 h-16 object-cover rounded-full border-4 border-blue-400 shadow cursor-pointer gallery-zoom-trigger" data-src="${img.src}" />
+        </div>
+        <button class="delete-gallery bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${img.id}">Supprimer</button>
+      `;
+      gallery.appendChild(li);
+    });
+    gallery.querySelectorAll('.delete-gallery').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          galleryImages = galleryImages.filter(img => img.id !== id);
+          renderGallery();
+        });
+      };
+    });
+    gallery.querySelectorAll('.gallery-zoom-trigger').forEach(imgEl => {
+      imgEl.onclick = function() {
+        const modal = document.getElementById('gallery-zoom-modal');
+        const zoomImg = document.getElementById('gallery-zoom-img');
+        zoomImg.src = this.dataset.src;
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+      };
+    });
+  }
+
+  // --- Blog post delete button ---
+  function renderPosts() {
+    const tbody = document.getElementById('post-list');
+    tbody.innerHTML = '';
+    blogPosts.forEach(post => {
+      const tr = document.createElement('tr');
+      tr.innerHTML = `
+        <td class="py-1">${post.title}</td>
+        <td class="py-1">${post.author}</td>
+        <td class="py-1">${post.date}</td>
+        <td class="py-1">
+          <button class="voir-post bg-green-600 hover:bg-green-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${post.id}">Voir</button>
+          <button class="delete-post bg-red-600 hover:bg-red-700 text-white px-3 py-1 rounded text-xs font-semibold" data-id="${post.id}">Delete</button>
+        </td>
+      `;
+      tbody.appendChild(tr);
+    });
+    tbody.querySelectorAll('.voir-post').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const post = blogPosts.find(p => p.id === id);
+        if (!post) return;
+        // Fill form
+        document.getElementById('edit-post-title').value = post.title;
+        document.getElementById('edit-post-author').value = post.author;
+        document.getElementById('edit-post-date').value = post.date;
+        document.getElementById('edit-post-content').value = post.content;
+        document.getElementById('edit-post-form').dataset.id = id;
+        document.getElementById('edit-post-preview').innerText = post.content;
+        // Fill images preview
+        for (let i = 1; i <= 3; i++) {
+          const img = post.images && post.images[i-1] ? post.images[i-1] : "";
+          const imgPreview = document.getElementById(`edit-post-img${i}-preview`);
+          imgPreview.src = img || "";
+          imgPreview.style.display = img ? "block" : "none";
+          document.getElementById(`edit-post-img${i}`).value = "";
+        }
+        // Show modal
+        const modal = document.getElementById('post-edit-modal');
+        modal.style.opacity = "1";
+        modal.style.pointerEvents = "auto";
+      };
+    });
+    tbody.querySelectorAll('.delete-post').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        showDeleteConfirmModal(() => {
+          blogPosts = blogPosts.filter(p => p.id !== id);
+          renderPosts();
+        });
+      };
+    });
+  }
+
+  // --- Info Boutique delete button ---
+  document.getElementById('delete-boutique-btn').onclick = function() {
+    const boutique = this.dataset.boutique;
+    showDeleteConfirmModal(() => {
+      alert('Fonction de suppression à implémenter pour la boutique: ' + boutique);
+      // You can implement actual deletion logic here if needed
+      document.getElementById('info-boutique-modal').style.opacity = "0";
+      document.getElementById('info-boutique-modal').style.pointerEvents = "none";
+    });
+  };
+
+  // ...existing code...
+</script>
+<!-- ...existing code... -->

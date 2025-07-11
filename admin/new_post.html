@@ -1,0 +1,304 @@
+<!doctype html>
+<html>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Admin Evala 2025</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body { font-family: 'Inter', sans-serif; background: #f7fafc; }
+    .sidebar-link { transition: background 0.2s, color 0.2s; }
+    .sidebar-link:hover, .sidebar-link.active { background: #dc2626; color: #fff; }
+    .stat-card { background: #fff; border-radius: 1rem; box-shadow: 0 2px 12px 0 rgba(0,0,0,0.07); }
+    .stat-icon { width: 48px; height: 48px; border-radius: 9999px; display: flex; align-items: center; justify-content: center; }
+    .slider-img-thumb { width: 60px; height: 40px; object-fit: cover; border-radius: 0.5rem; }
+  </style>
+</head>
+<body>
+<div class="flex min-h-screen">
+  <!-- Sidebar -->
+  <aside class="w-64 bg-black text-white flex flex-col py-8 px-4">
+    <div class="flex items-center gap-2 mb-8">
+      <img src="images/LOGOEVALA.png" alt="Admin Logo" class="h-10 w-10 rounded-full bg-white" />
+      <span class="text-xl font-extrabold tracking-tight">Admin Evala</span>
+    </div>
+    <nav class="flex-1 flex flex-col gap-2">
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold active">Dashboard</a>
+      <a href="slider.html" class="sidebar-link px-4 py-2 rounded font-semibold">Slider</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Inscrire Evalos</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Nouvelle Boutique</a>
+      <a href="new_post.html" class="sidebar-link px-4 py-2 rounded font-semibold">Nouveau Post</a>
+      <a href="#" class="sidebar-link px-4 py-2 rounded font-semibold">Événement / Calendrier</a>
+      <a href="#" id="logout-link" class="sidebar-link px-4 py-2 rounded font-semibold text-red-400 hover:bg-red-700 hover:text-white">Log out</a>
+    </nav>
+  </aside>
+  <!-- Main Content -->
+  
+</div>
+<script>
+  // Simple in-memory slider data
+  let sliders = [
+    { id: 1, title: "Image 1", img: "images/img1.jpeg" },
+    { id: 2, title: "Image 2", img: "images/img2.jpeg" }
+  ];
+  let sliderIdCounter = sliders.length + 1;
+
+  function renderSliders() {
+    const list = document.getElementById('slider-list');
+    list.innerHTML = '';
+    sliders.forEach(slider => {
+      const li = document.createElement('li');
+      li.className = "flex items-center justify-between bg-gray-100 rounded px-3 py-2";
+      li.innerHTML = `
+        <div class="flex items-center gap-3">
+          <img src="${slider.img}" alt="${slider.title}" class="slider-img-thumb" />
+          <span class="font-semibold">${slider.title}</span>
+        </div>
+        <div class="flex gap-2">
+          <button class="edit-slider bg-blue-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Edit</button>
+          <button class="delete-slider bg-red-600 text-white px-3 py-1 rounded" data-id="${slider.id}">Delete</button>
+        </div>
+      `;
+      list.appendChild(li);
+    });
+    // Attach edit/delete events
+    document.querySelectorAll('.delete-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        sliders = sliders.filter(s => s.id !== id);
+        renderSliders();
+      };
+    });
+    document.querySelectorAll('.edit-slider').forEach(btn => {
+      btn.onclick = function() {
+        const id = Number(this.dataset.id);
+        const slider = sliders.find(s => s.id === id);
+        if (!slider) return;
+        const newTitle = prompt("Modifier le titre du slider :", slider.title);
+        if (newTitle !== null && newTitle.trim() !== "") {
+          slider.title = newTitle.trim();
+          renderSliders();
+        }
+      };
+    });
+  }
+
+  // Add new slider
+  document.getElementById('add-slider-form').onsubmit = function(e) {
+    e.preventDefault();
+    const fileInput = document.getElementById('slider-image');
+    const titleInput = document.getElementById('slider-title');
+    const file = fileInput.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      sliders.push({
+        id: sliderIdCounter++,
+        title: titleInput.value,
+        img: evt.target.result // base64 image
+      });
+      renderSliders();
+      fileInput.value = '';
+      titleInput.value = '';
+    };
+    reader.readAsDataURL(file);
+  };
+
+  // Initial render
+  renderSliders();
+
+  // Example products data per boutique (add img for demo)
+  const productsData = {
+    "maïs": [
+      { id: 1, name: "Maïs grillé simple", price: "200 FCFA", img: "images/maize.jpg" },
+      { id: 2, name: "Maïs grillé épicé", price: "250 FCFA", img: "images/maize.jpg" }
+    ],
+    "sodabi": [
+      { id: 1, name: "Sodabi nature", price: "500 FCFA", img: "images/sodabi.jpg" },
+      { id: 2, name: "Sodabi aromatisé", price: "700 FCFA", img: "images/sodabi.jpg" }
+    ],
+    "bijoux": [
+      { id: 1, name: "Bracelet artisanal", price: "1 000 FCFA", img: "images/bracelet.jpg" },
+      { id: 2, name: "Collier perles", price: "2 000 FCFA", img: "images/bracelet.jpg" }
+    ],
+    "tshirts": [
+      { id: 1, name: "T-shirt Evala S", price: "3 000 FCFA", img: "images/tshirt.jpg" },
+      { id: 2, name: "T-shirt Evala M", price: "3 000 FCFA", img: "images/tshirt.jpg" },
+      { id: 3, name: "T-shirt Evala L", price: "3 000 FCFA", img: "images/tshirt.jpg" }
+    ]
+  };
+
+  // Modal logic
+  document.querySelectorAll('.voir-produits-btn').forEach(btn => {
+    btn.onclick = function() {
+      const boutique = this.dataset.boutique;
+      const products = productsData[boutique] || [];
+      const modal = document.getElementById('products-modal');
+      const list = document.getElementById('products-list');
+      const title = document.getElementById('products-modal-title');
+      title.textContent = "Produits du stand " + this.closest('tr').children[0].textContent;
+      list.innerHTML = '';
+      products.forEach(product => {
+        const li = document.createElement('li');
+        li.className = "flex items-center justify-between bg-gray-100 rounded-xl px-4 py-3";
+        li.innerHTML = `
+          <div class="flex items-center gap-4">
+            <img src="${product.img || 'images/LOGOEVALA.png'}" alt="${product.name}" class="w-16 h-16 rounded-full border-4 border-red-600 object-cover shadow" />
+            <div>
+              <span class="font-semibold">${product.name}</span>
+              <span class="ml-2 text-gray-600">${product.price}</span>
+            </div>
+          </div>
+          <div class="flex gap-2">
+            <button class="update-product bg-blue-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Update</button>
+            <button class="delete-product bg-red-600 text-white px-2 py-1 rounded text-xs" data-id="${product.id}" data-boutique="${boutique}">Delete</button>
+          </div>
+        `;
+        list.appendChild(li);
+      });
+      modal.style.opacity = "1";
+      modal.style.pointerEvents = "auto";
+
+      // Attach update/delete events
+      list.querySelectorAll('.delete-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          productsData[b] = productsData[b].filter(p => p.id !== id);
+          document.querySelector(`.voir-produits-btn[data-boutique="${b}"]`).click();
+        };
+      });
+      list.querySelectorAll('.update-product').forEach(btn => {
+        btn.onclick = function() {
+          const id = Number(this.dataset.id);
+          const b = this.dataset.boutique;
+          const prod = productsData[b].find(p => p.id === id);
+          if (!prod) return;
+          // Fill update modal
+          document.getElementById('update-product-name').value = prod.name;
+          document.getElementById('update-product-price').value = prod.price;
+          document.getElementById('update-product-img').src = prod.img || 'images/LOGOEVALA.png';
+          document.getElementById('update-product-form').dataset.boutique = b;
+          document.getElementById('update-product-form').dataset.id = id;
+          document.getElementById('update-product-modal').style.opacity = "1";
+          document.getElementById('update-product-modal').style.pointerEvents = "auto";
+        };
+      });
+    };
+  });
+
+  document.getElementById('close-products-modal').onclick = function() {
+    const modal = document.getElementById('products-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('products-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  // Update product modal logic
+  document.getElementById('close-update-product-modal').onclick = function() {
+    const modal = document.getElementById('update-product-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('update-product-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+
+  document.getElementById('update-product-img-input').onchange = function(e) {
+    const file = e.target.files[0];
+    if (!file) return;
+    const reader = new FileReader();
+    reader.onload = function(evt) {
+      document.getElementById('update-product-img').src = evt.target.result;
+    };
+    reader.readAsDataURL(file);
+  };
+
+  document.getElementById('update-product-form').onsubmit = function(e) {
+    e.preventDefault();
+    const b = this.dataset.boutique;
+    const id = Number(this.dataset.id);
+    const prod = productsData[b].find(p => p.id === id);
+    if (!prod) return;
+    prod.name = document.getElementById('update-product-name').value;
+    prod.price = document.getElementById('update-product-price').value;
+    prod.img = document.getElementById('update-product-img').src;
+    document.getElementById('update-product-modal').style.opacity = "0";
+    document.getElementById('update-product-modal').style.pointerEvents = "none";
+    // Refresh products modal
+    document.querySelector(`.voir-produits-btn[data-boutique="${b}"]`).click();
+  };
+
+  document.addEventListener('keydown', function(e) {
+    const modal = document.getElementById('products-modal');
+    const updateModal = document.getElementById('update-product-modal');
+    if (modal.style.opacity === "1" && (e.key === "Escape" || e.key === "Esc")) {
+      modal.style.opacity = "0";
+      modal.style.pointerEvents = "none";
+    }
+    if (updateModal.style.opacity === "1" && (e.key === "Escape" || e.key === "Esc")) {
+      updateModal.style.opacity = "0";
+      updateModal.style.pointerEvents = "none";
+    }
+  });
+
+  // Add Boutique Modal logic
+  document.getElementById('add-boutique-btn').onclick = function() {
+    const modal = document.getElementById('add-boutique-modal');
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+  };
+  document.getElementById('close-add-boutique-modal').onclick = function() {
+    const modal = document.getElementById('add-boutique-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('add-boutique-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+  document.getElementById('add-boutique-form').onsubmit = function(e) {
+    e.preventDefault();
+    // Here you would handle the new boutique data (e.g., add to a list, send to server, etc.)
+    // For demo, just close the modal
+    document.getElementById('add-boutique-modal').style.opacity = "0";
+    document.getElementById('add-boutique-modal').style.pointerEvents = "none";
+    // Optionally reset the form
+    this.reset();
+    alert('Nouvelle boutique ajoutée !');
+  };
+
+  // Logout modal logic
+  document.getElementById('logout-link').onclick = function(e) {
+    e.preventDefault();
+    const modal = document.getElementById('logout-modal');
+    modal.style.opacity = "1";
+    modal.style.pointerEvents = "auto";
+  };
+  document.getElementById('logout-cancel').onclick = function() {
+    const modal = document.getElementById('logout-modal');
+    modal.style.opacity = "0";
+    modal.style.pointerEvents = "none";
+  };
+  document.getElementById('logout-confirm').onclick = function() {
+    window.location.href = "../login.html";
+  };
+  document.getElementById('logout-modal').addEventListener('click', function(e) {
+    if (e.target === this) {
+      this.style.opacity = "0";
+      this.style.pointerEvents = "none";
+    }
+  });
+</script>
+<!-- ...existing code... -->

@@ -1,0 +1,287 @@
+<!doctype html>
+<html>
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
+
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+</style>
+      
+    </style>
+</head>
+</head>
+<body style="background: url('images/.jpg') center center / cover repeat fixed;">
+<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+    <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+    <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
+  </ul>
+  <!-- Logo Center -->
+  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    <a href="" > <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /> </a>
+    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+  </span>
+  <!-- Right Nav -->
+  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+    <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+    <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+  </ul>
+</header>
+
+<div class="w-full h-[300px] md:h-[300px] relative flex items-center justify-start mb-10 mb-[0px]">
+  <img src="images/img3.jpeg" alt="Blog Banner" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="filter: brightness(0.55);" />
+  <div class="relative z-10 flex flex-row items-center justify-start w-full h-full pl-12">
+    <img src="images/img1.jpeg" alt="Chef Kossi" class="w-36 h-36 rounded-full border-8 border-red-600 object-cover shadow-lg mr-8" />
+    <div>
+      <div class="flex items-center gap-2 mb-1">
+        <span class="text-2xl font-bold text-red-200 drop-shadow">Chef Kossi</span>
+        <span class="text-gray-100 text-lg">| Leader du quartier Nord</span>
+      </div>
+      <div class="flex items-center mb-2">
+        <span class="text-yellow-400 text-2xl">&#9733;</span>
+        <span class="text-yellow-400 text-2xl">&#9733;</span>
+        <span class="text-yellow-400 text-2xl">&#9733;</span>
+        <span class="text-yellow-400 text-2xl">&#9733;</span>
+        <span class="text-gray-500 text-2xl">&#9733;</span>
+      </div>
+      <div class="text-gray-100 text-base max-w-md drop-shadow">
+        Chef Kossi est reconnu pour son leadership et son engagement envers la tradition Evala. Il inspire son équipe par sa détermination et son esprit de cohésion.
+      </div>
+    </div>
+  </div>
+</div>
+
+<!-- Fighters Grid -->
+<div class="max-w-6xl mx-auto px-4 py-8">
+  <h2 class="text-2xl font-bold text-red-700 mb-6 text-center">Les Lutteurs de l'équipe</h2>
+  <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 gap-8">
+    <!-- Fighter 1 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img2.jpeg" alt="Fighter 1" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Kodjo Amévi</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Kara Nord</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 2 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img3.jpeg" alt="Fighter 2" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Yawovi Tchalla</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Kara Sud</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 3 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img4.jpeg" alt="Fighter 3" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Sena Kafui</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Kozah</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 4 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img5.jpeg" alt="Fighter 4" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Akou Mawuli</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Bassar</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 5 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img6.jpg" alt="Fighter 5" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Komlan Sewa</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Binah</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 6 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img1.jpeg" alt="Fighter 6" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Yao Kossi</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Dankpen</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 7 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img2.jpeg" alt="Fighter 7" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Teko Mensah</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Assoli</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+    <!-- Fighter 8 -->
+    <div class="bg-white/90 rounded-2xl shadow-lg p-0 flex flex-col items-center w-full max-w-xl mx-auto">
+      <img src="images/img3.jpeg" alt="Fighter 8" class="w-full h-56 object-cover rounded-t-2xl" />
+      <div class="w-full px-6 py-4 flex flex-col items-start">
+        <h3 class="font-bold text-lg text-red-700 mb-1">Kossi Mawunyo</h3>
+        <p class="text-gray-700 text-sm mb-3">Région : Kéran</p>
+        <div class="flex gap-4">
+          <button class="flex items-center gap-1 text-green-600 hover:text-green-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M2 10a1 1 0 011-1h3V5a3 3 0 016 0v4h3a1 1 0 01.8 1.6l-6 8A1 1 0 019 18V11H3a1 1 0 01-1-1z"/></svg>
+            Like
+          </button>
+          <button class="flex items-center gap-1 text-red-600 hover:text-red-800 font-bold text-lg">
+            <svg xmlns="http://www.w3.org/2000/svg" class="w-6 h-6" fill="currentColor" viewBox="0 0 20 20"><path d="M18 10a1 1 0 00-1-1h-3V5a3 3 0 00-6 0v4H3a1 1 0 00-.8 1.6l6 8A1 1 0 0011 18V11h6a1 1 0 001-1z"/></svg>
+            Dislike
+          </button>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-6">
+    <!-- Left: Tags/Links -->
+    <div class="flex flex-col md:flex-row gap-2 md:gap-4 mb-4 md:mb-0">
+      <a href="index.html" class="block hover:text-yellow-400 transition">A propos </a>
+      <a href="#" class="block hover:text-yellow-400 transition">Historique</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Calendrier</a>
+      <a href="#" class="block hover:text-yellow-400 transition">La Foire</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Les Evalous</a>
+      <a href="#" class="block hover:text-yellow-400 transition">Contact</a>
+    </div>
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
+</body>
+</html>
