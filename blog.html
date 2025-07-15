@@ -53,6 +53,18 @@
     font-weight:none;
     padding: 0.25rem 0.75rem;
   }
+  @media (max-width: 640px) {
+    .blog-cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .blog-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: none !important;
+    }
+  }
 </style>
       
     </style>

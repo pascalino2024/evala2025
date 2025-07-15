@@ -33,13 +33,11 @@
       transform: perspective(600px) rotateX(0deg) scale(1);
       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
       background: #dc2626; /* Red background */
-      border-radius: 50%;   /* Make it perfectly circular */
-      width: 90px;
+      border-radius: 50%; /* Remove circular shape */
       height: 90px;
-      /* Add a subtle border and shadow for a nicer look */
+      padding: 0;
       border: 3px solid #fff;
       box-shadow: 0 4px 16px 0 rgba(220,38,38,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
-      padding: 0;
       text-align: center;
       display: flex;
       align-items: center;
@@ -52,7 +50,7 @@
     }
     .macbook-effect-item:hover {
       transform: perspective(600px) rotateX(18deg) scale(1.08);
-      box-shadow: 0 16px 40px 0 rgba(220,38,38,0.28), 0 2px 8px 0 rgba(0,0,0,0.08);
+      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
       background: #b91c1c; /* darker red on hover */
       z-index: 10;
     }
@@ -80,17 +78,18 @@
         justify-content: flex-start;
       }
       .macbook-effect-item {
-        width: auto !important;
-        height: auto !important;
-        justify-content: flex-start;
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 50% !important;
+        justify-content: center;
         display: flex;
         align-items: center;
-        padding: 0.75rem 1.25rem;
+        padding: 0 !important;
       }
       .macbook-effect-item svg {
         width: 2rem;
         height: 2rem;
-        margin-right: 0.75rem;
+        margin: auto;
         display: block;
       }
     }
@@ -163,6 +162,11 @@
         </svg>
       </button>
       <!-- Logo -->
+        &nbsp; 
+         &nbsp; 
+          &nbsp; 
+           &nbsp; 
+            &nbsp; 
       <span class="mx-2 text-lg font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
         <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
         <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
@@ -173,6 +177,16 @@
         <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
       </span>
     </div>
+      <!-- Calendrier Button (only on mobile) -->
+    <button id="mobile-calendrier-btn"
+      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg shadow transition duration-200 text-sm"
+      style="margin-left:auto;">
+      <svg xmlns="http://www.w3.org/2000/svg" class="w-5 h-5" fill="currentColor" viewBox="0 0 20 20">
+        <path d="M10 2a1 1 0 01.894.553l2.382 4.823 5.325.773a1 1 0 01.554 1.706l-3.852 3.753.91 5.308a1 1 0 01-1.451 1.054L10 17.347l-4.762 2.5a1 1 0 01-1.451-1.054l.91-5.308-3.852-3.753a1 1 0 01.554-1.706l5.325-.773L9.106 2.553A1 1 0 0110 2z"/>
+      </svg>
+      Calendrier
+    </button>
+
   </div>
   <!-- Mobile Nav Overlay -->
   <nav id="mobile-nav-overlay" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-green-900 transition-all duration-300 translate-x-full" style="display:none;">
@@ -196,6 +210,21 @@
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img3.jpeg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
         <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <!-- Buttons on the same line -->
+          <div class="flex flex-row items-center justify-center gap-2 sm:gap-4 mb-4">
+            <button class="hover:bg-red-700 font-bold py-2 px-4 sm:px-5 rounded-lg shadow transition duration-200 text-sm sm:text-base" style="background-color:#d21b33 ;color:#fff;">
+              Acheter Ticket
+            </button>
+            <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-4 sm:px-5 rounded-lg shadow transition duration-200 relative overflow-hidden text-sm sm:text-base">
+              <span class="relative z-10">Voir Vidéos</span>
+              <span class="relative z-10">
+                <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
+                  <polygon points="6,4 16,10 6,16" />
+                </svg>
+              </span>
+              <span class="absolute inset-0 rounded-lg pointer-events-none" style="background: radial-gradient(circle at 70% 50%, #6ee7b7 0%, transparent 70%); opacity: 0.3;"></span>
+            </button>
+          </div>
           <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
             <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage

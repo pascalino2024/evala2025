@@ -300,43 +300,88 @@ const matches = {
   ]
 };
 
+// Modal logic for small screens
+function showMatchesModal(contentHtml) {
+  let modal = document.getElementById('matches-modal');
+  if (!modal) {
+    modal = document.createElement('div');
+    modal.id = 'matches-modal';
+    modal.className = 'fixed inset-0 z-50 flex items-center justify-center bg-black/70';
+    modal.innerHTML = `
+      <div class="bg-white rounded-lg shadow-lg w-[90vw] max-w-xl max-h-[90vh] overflow-auto p-4 relative">
+        <button id="close-matches-modal" class="absolute top-2 right-2 text-2xl text-gray-700 hover:text-red-600 font-bold bg-white/80 rounded-full px-2 py-1 z-10" aria-label="Fermer">&times;</button>
+        <div id="matches-modal-body"></div>
+      </div>
+    `;
+    document.body.appendChild(modal);
+    document.getElementById('close-matches-modal').onclick = function() {
+      modal.style.display = 'none';
+      document.body.style.overflow = '';
+    };
+    modal.onclick = function(e) {
+      if (e.target === modal) {
+        modal.style.display = 'none';
+        document.body.style.overflow = '';
+      }
+    };
+  }
+  document.getElementById('matches-modal-body').innerHTML = contentHtml;
+  modal.style.display = 'flex';
+  document.body.style.overflow = 'hidden';
+}
+
 // Tab logic for left-side days
 document.querySelectorAll('.day-tab').forEach(btn => {
   btn.addEventListener('click', function() {
     const date = this.getAttribute('data-date');
     const dayMatches = matches[date] || [];
     const panel = document.getElementById('events-panel');
-    if (dayMatches.length > 0) {
-      panel.innerHTML = `
-        <div class="grid md:grid-cols-2 gap-6">
-          ${dayMatches.map(match => `
-            <div class="rounded-lg border border-gray-200 bg-white p-6 flex flex-col items-center justify-center ${match.final ? 'border-2 border-green-600 bg-green-50' : ''}">
-              <div class="flex flex-col items-center gap-2 w-full">
-                <div class="flex items-center gap-4">
-                  <span class="font-extrabold text-green-700 text-lg">${match.fighter1}</span>
-                  <span class="font-bold text-gray-500 text-xl">vs</span>
-                  <span class="font-extrabold text-green-700 text-lg">${match.fighter2}</span>
-                </div>
-                <div class="flex flex-col md:flex-row gap-2 text-sm text-gray-700 mt-2 w-full justify-center">
-                  <span><span class="font-semibold text-green-800">Equipe:</span> ${match.team1} <span class="text-gray-400">|</span> <span class="font-semibold text-green-800">Région:</span> ${match.region}</span>
-                  <span><span class="font-semibold text-green-800">Equipe:</span> ${match.team2}</span>
-                </div>
-                <div class="mt-2 text-green-600 font-semibold text-sm"><span class="font-bold">Lieu:</span> ${match.place}</div>
-                ${match.final ? '<div class="mt-4 px-4 py-1 bg-green-600 text-white rounded-full font-bold text-sm">Finale</div>' : ''}
+    const matchesHtml = dayMatches.length > 0 ? `
+      <div class="grid md:grid-cols-2 gap-6">
+        ${dayMatches.map(match => `
+          <div class="rounded-lg border border-gray-200 bg-white p-6 flex flex-col items-center justify-center ${match.final ? 'border-2 border-green-600 bg-green-50' : ''}">
+            <div class="flex flex-col items-center gap-2 w-full">
+              <div class="flex items-center gap-4">
+                <span class="font-extrabold text-green-700 text-lg">${match.fighter1}</span>
+                <span class="font-bold text-gray-500 text-xl">vs</span>
+                <span class="font-extrabold text-green-700 text-lg">${match.fighter2}</span>
               </div>
+              <div class="flex flex-col md:flex-row gap-2 text-sm text-gray-700 mt-2 w-full justify-center">
+                <span><span class="font-semibold text-green-800">Equipe:</span> ${match.team1} <span class="text-gray-400">|</span> <span class="font-semibold text-green-800">Région:</span> ${match.region}</span>
+                <span><span class="font-semibold text-green-800">Equipe:</span> ${match.team2}</span>
+              </div>
+              <div class="mt-2 text-green-600 font-semibold text-sm"><span class="font-bold">Lieu:</span> ${match.place}</div>
+              ${match.final ? '<div class="mt-4 px-4 py-1 bg-green-600 text-white rounded-full font-bold text-sm">Finale</div>' : ''}
             </div>
-          `).join('')}
-        </div>
-      `;
+          </div>
+        `).join('')}
+      </div>
+    ` : '<div class="text-lg text-green-800 font-bold mb-2 text-center">Aucun match ce jour.</div>';
+
+    // Responsive: show modal on small screens, panel on md+
+    if (window.innerWidth <= 640) {
+      showMatchesModal(matchesHtml);
     } else {
-      panel.innerHTML = '<div class="text-lg text-green-800 font-bold mb-2 text-center">Aucun match ce jour.</div>';
+      panel.innerHTML = matchesHtml;
     }
+
     // Highlight selected tab
     document.querySelectorAll('.day-tab').forEach(b => b.classList.remove('bg-white', 'text-green-700', 'ring-4', 'ring-green-200'));
     this.classList.add('bg-white', 'text-green-700', 'ring-4', 'ring-green-200');
   });
 });
 </script>
+<!-- Modal styles -->
+<style>
+  @media (max-width: 640px) {
+    #events-panel {
+      display: none !important;
+    }
+    #matches-modal {
+      display: none;
+    }
+  }
+</style>
 
  
 <footer class="w-full bg-black text-green-100 py-6 px-4 fixed bottom-0 left-0 z-40">
