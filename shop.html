@@ -1,89 +1,190 @@
 <!doctype html>
 <html>
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Evala 2025</title>
-    <!-- Google Fonts: Inter -->
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-    <head>
-    <style>
-      body, .header-nav {
-        font-family: 'Inter', Regular, sans-serif;
-      }
-      body {
-        /* Removed background color and gradient */
-        min-height: 100vh;
-      }
-      ::selection {
-        background: #6ee7b7;
-      }
-      /* Custom scrollbar for modern look */
-      ::-webkit-scrollbar {
-        width: 8px;
-        background: #bae6fd;
-      }
-      ::-webkit-scrollbar-thumb {
-        background: #34d399;
-        border-radius: 8px;
-      }
-      /* Hide scrollbar for mobile nav overlay */
-      .mobile-nav::-webkit-scrollbar {
-        display: none;
-      }
-
-
-
-   
-  /* Add this to your <head> or CSS file for fade effect */
-
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Evala 2025</title>
+  <!-- Google Fonts: Inter -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+  <style>
+    body, .header-nav {
+      font-family: 'Inter', Regular, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background-color:#fff;
+      /* Removed background color to eliminate green background */
+    }
     
-  /* ...existing styles... */
-  header ul li:hover {
-    background: #dc2626; /* Tailwind's red-600 */
-    border-radius: 0.5rem;
    
-    transition: background 0.2s;
-  }
-  header ul li a {
-    display: block;
-    font-size:13px;
-    color:white;
-    font-weight:none;
-    padding: 0.25rem 0.75rem;
-  }
-</style>
-      
-    </style>
-</head>
+    header ul li:hover {
+      background: #dc2626;
+      border-radius: 0.5rem;
+      transition: background 0.2s;
+    }
+    header ul li a {
+      display: block;
+      font-size:13px;
+      color:white;
+      padding: 0.25rem 0.75rem;
+    }
+    .macbook-effect-item {
+      transform: perspective(600px) rotateX(0deg) scale(1);
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+      background: #dc2626; /* Red background */
+      /* border-radius: 50%; */ /* Remove circular shape */
+      border-radius: 0.75rem;   /* Make it square with slightly rounded corners */
+      width: 90px;
+      height: 90px;
+      padding: 0;
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        transform 0.3s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.3s cubic-bezier(.4,2,.6,1),
+        background 0.3s;
+      font-size: 1rem;
+    }
+    .macbook-effect-item:hover {
+      transform: perspective(600px) rotateX(18deg) scale(1.08);
+      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+      background: #b91c1c; /* darker red on hover */
+      z-index: 10;
+    }
+    .macbook-effect-item:active {
+      transform: perspective(600px) rotateX(10deg) scale(1.04);
+      box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
+    }
+    .macbook-effect-item svg {
+      width: 3.0rem;
+      height: 3.0rem;
+    }
+    @media (max-width: 1024px) {
+      .macbook-effect-item svg {
+        width: 2.0rem;
+        height: 2.0rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .macbook-effect-list {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-left: 1.5rem;
+        margin-top: 100px;
+        justify-content: flex-start;
+      }
+      .macbook-effect-item {
+        width: auto !important;
+        height: auto !important;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+      }
+      .macbook-effect-item svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.75rem;
+        display: block;
+      }
+    }
+    @media (min-width: 768px) {
+      .macbook-effect-item {
+        width: 120px;
+        height: 120px;
+        font-size: 1.15rem;
+      }
+    }
+    /* Responsive header styles */
+    .mobile-header {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-header {
+        display: none !important;
+      }
+      .mobile-header {
+        display: flex !important;
+      }
+    }
+    @media (min-width: 769px) {
+      .mobile-header {
+        display: none !important;
+      }
+      .desktop-header {
+        display: flex !important;
+      }
+    }
+  </style>
 </head>
 <body>
-<header class="fixed top-0 left-0 w-full z-50 h-[45px] flex items-center justify-center px-2 md:px-8 bg-black">
-  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
-    <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
-    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
-    <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
-  </ul>
-  <!-- Logo Center -->
-  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
-    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-    <a href="" > <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /> </a>
-    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-  </span>
-  <!-- Right Nav -->
-  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
-    <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
-    <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
-    <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
-  </ul>
+<!-- Responsive Header -->
+<header>
+  <!-- Desktop Header -->
+  <div class="desktop-header fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-between px-2 md:px-8" style="background:black;">
+    <span class="mx-2 md:mx-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <a href=""><img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /></a>
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </span>
+    <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+      <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+      <li><a href="match.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Matches</a></li>
+      <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+      <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+      <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
+      <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+      <li><a href="kara_maps.html" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+      <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+      <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+      <li><a href="contact.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+    </ul>
+  </div>
+  <!-- Mobile Header -->
+  <div class="mobile-header fixed top-0 left-0 w-full z-50 h-[64px] flex items-center justify-between px-3" style="background:black;">
+    <div class="flex items-center gap-2">
+      <!-- Hamburger Icon -->
+      <button id="mobile-menu-btn" class="p-2 focus:outline-none" aria-label="Menu">
+        <svg id="menu-icon" width="32" height="32" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" width="32" height="32" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" style="display:none;">
+          <path d="M6 6l12 12M6 18L18 6"/>
+        </svg>
+      </button>
+      <!-- Logo -->
+      <span class="mx-2 text-lg font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+        <a href=""><img src="images/LOGOEVALA.png" alt="" class="h-6" style="height:1.5rem; width:auto;" /></a>
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      </span>
+    </div>
+  </div>
+  <!-- Mobile Nav Overlay -->
+  <nav id="mobile-nav-overlay" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-green-900 transition-all duration-300 translate-x-full" style="display:none;">
+    <a href="" class="hover:text-green-600 transition">Accueil</a>
+    <a href="match.html" class="hover:text-green-600 transition">Les Matches</a>
+    <a href="historique.html" class="hover:text-green-600 transition">Historique</a>
+    <a href="calendrier.html" class="hover:text-green-600 transition">Calendrier</a>
+    <a href="foire.html" class="hover:text-green-600 transition">La Foire</a>
+    <a href="evalos.html" class="hover:text-green-600 transition">Les Evalous</a>
+    <a href="#" class="hover:text-green-600 transition">Kara Maps</a>
+    <a href="gallerie.html" class="hover:text-green-600 transition">Gallery</a>
+    <a href="blog.html" class="hover:text-green-600 transition">Blog</a>
+    <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+  </nav>
 </header>
 <div class="w-full h-[270px] md:h-[270px] relative flex items-center justify-center mb-10">
   <img src="images/img3.jpeg" alt="Blog Banner" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="filter: brightness(0.55);" />

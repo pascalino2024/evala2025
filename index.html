@@ -58,6 +58,40 @@
       transform: perspective(600px) rotateX(10deg) scale(1.04);
       box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
     }
+    .macbook-effect-item svg {
+      width: 3.0rem;
+      height: 3.0rem;
+    }
+    @media (max-width: 1024px) {
+      .macbook-effect-item svg {
+        width: 2.0rem;
+        height: 2.0rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .macbook-effect-list {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-left: 1.5rem;
+        margin-top: 100px;
+        justify-content: flex-start;
+      }
+      .macbook-effect-item {
+        width: auto !important;
+        height: auto !important;
+        justify-content: flex-start;
+        display: flex;
+        align-items: center;
+        padding: 0.75rem 1.25rem;
+      }
+      .macbook-effect-item svg {
+        width: 2rem;
+        height: 2rem;
+        margin-right: 0.75rem;
+        display: block;
+      }
+    }
     @media (min-width: 768px) {
       .macbook-effect-item {
         width: 120px;
@@ -65,65 +99,107 @@
         font-size: 1.15rem;
       }
     }
+    /* Responsive header styles */
+    .mobile-header {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-header {
+        display: none !important;
+      }
+      .mobile-header {
+        display: flex !important;
+      }
+    }
+    @media (min-width: 769px) {
+      .mobile-header {
+        display: none !important;
+      }
+      .desktop-header {
+        display: flex !important;
+      }
+    }
   </style>
 </head>
 <body>
-<header class="fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-center px-2 md:px-8">
-  <!-- Left Nav -->
-  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
-   <li><a href="match.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Matches </a></li> 
-    <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
-    <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
-    <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
-  </ul>
-  <!-- Logo Center -->
-  <span class="mx-4 md:mx-8 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
-    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-    <a href="" > <img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /> </a>
-    <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-    <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-  </span>
-  <!-- Right Nav -->
-  <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
-    <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
-    <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
-    <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
-    <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
-    <li><a href="contact.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
-  </ul>
+<!-- Responsive Header -->
+<header>
+  <!-- Desktop Header -->
+  <div class="desktop-header fixed top-0 left-0 w-full z-50 h-[80px] flex items-center justify-between px-2 md:px-8" style="background:transparent;">
+    <span class="mx-2 md:mx-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <a href=""><img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /></a>
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </span>
+    <ul class="flex items-center gap-4 md:gap-6 lg:gap-8">
+      <li><a href="" class="text-green-900 font-semibold hover:text-green-300 transition">Accueil</a></li>
+      <li><a href="match.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Matches</a></li>
+      <li><a href="historique.html" class="text-green-900 font-semibold hover:text-green-300 transition">Historique</a></li>
+      <li><a href="calendrier.html" class="text-green-900 font-semibold hover:text-green-300 transition">Calendrier</a></li>
+      <li><a href="foire.html" class="text-green-900 font-semibold hover:text-green-300 transition">La Foire</a></li>
+      <li><a href="evalos.html" class="text-green-900 font-semibold hover:text-green-300 transition">Les Evalous</a></li>
+      <li><a href="#" class="text-green-900 font-semibold hover:text-green-300 transition">Kara Maps</a></li>
+      <li><a href="gallerie.html" class="text-green-900 font-semibold hover:text-green-300 transition">Gallery</a></li>
+      <li><a href="blog.html" class="text-green-900 font-semibold hover:text-green-300 transition">Blog</a></li>
+      <li><a href="contact.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
+    </ul>
+  </div>
+  <!-- Mobile Header -->
+  <div class="mobile-header fixed top-0 left-0 w-full z-50 h-[64px] flex items-center justify-between px-3" style="background:transparent;">
+    <div class="flex items-center gap-2">
+      <!-- Hamburger Icon -->
+      <button id="mobile-menu-btn" class="p-2 focus:outline-none" aria-label="Menu">
+        <svg id="menu-icon" width="32" height="32" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
+          <path d="M4 6h16M4 12h16M4 18h16"/>
+        </svg>
+        <svg id="close-icon" width="32" height="32" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24" style="display:none;">
+          <path d="M6 6l12 12M6 18L18 6"/>
+        </svg>
+      </button>
+      <!-- Logo -->
+      <span class="mx-2 text-lg font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+        <a href=""><img src="images/LOGOEVALA.png" alt="" class="h-6" style="height:1.5rem; width:auto;" /></a>
+        <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+        <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      </span>
+    </div>
+  </div>
+  <!-- Mobile Nav Overlay -->
+  <nav id="mobile-nav-overlay" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-green-900 transition-all duration-300 translate-x-full" style="display:none;">
+    <a href="" class="hover:text-green-600 transition">Accueil</a>
+    <a href="match.html" class="hover:text-green-600 transition">Les Matches</a>
+    <a href="historique.html" class="hover:text-green-600 transition">Historique</a>
+    <a href="calendrier.html" class="hover:text-green-600 transition">Calendrier</a>
+    <a href="foire.html" class="hover:text-green-600 transition">La Foire</a>
+    <a href="evalos.html" class="hover:text-green-600 transition">Les Evalous</a>
+    <a href="#" class="hover:text-green-600 transition">Kara Maps</a>
+    <a href="gallerie.html" class="hover:text-green-600 transition">Gallery</a>
+    <a href="blog.html" class="hover:text-green-600 transition">Blog</a>
+    <a href="contact.html" class="hover:text-green-600 transition">Contact</a>
+  </nav>
 </header>
-
-<!-- Mobile Nav Overlay -->
-<div id="mobile-nav" class="fixed inset-0 z-50 bg-white/95 backdrop-blur-lg flex flex-col items-center justify-center space-y-8 text-xl font-semibold text-green-900 mobile-nav transition-all duration-300 translate-x-full md:hidden" style="display:none;">
-  <button id="close-mobile-nav" class="absolute top-6 right-8 text-3xl text-green-800 hover:text-green-600">&times;</button>
-  <a href="#" class="hover:text-green-600 transition">Accueil</a>
-  <a href="#" class="hover:text-green-600 transition">A propos de Nous</a>
-  <a href="historique.html" class="hover:text-green-600 transition">Historique</a>
-  <a href="#" class="hover:text-green-600 transition">Event(Calendrier)</a>
-  <a href="#" class="hover:text-green-600 transition">Contact</a>
-  <a href="#" class="hover:text-green-600 transition">Gallery</a>
-  <a href="#" class="hover:text-green-600 transition">Les Evalos</a>
-  <a href="kara_maps.html" class="hover:text-green-600 transition">Kara Maps</a>
-</div>
-
 <main>
-  <div class="w-full max-w-full xl:w-screen xl:max-w-none xl:h-screen h-[650px] xs:h-[400px] sm:h-[450px] md:h-[950px] lg:h-[1000px] mt-0 md:mt-0 px-2 md:px-0 mx-auto relative overflow-hidden shadow-2xl bg-white/70 backdrop-blur flex flex-col md:flex-row">
+  <div class="w-full max-w-full xl:w-screen xl:max-w-none h-screen min-h-screen mt-0 md:mt-0 px-1 sm:px-2 md:px-0 mx-auto relative overflow-hidden shadow-2xl bg-white/70 backdrop-blur flex flex-col md:flex-row">
     <!-- Slider Track (Images + Texts) -->
-    <div class="absolute inset-0 flex transition-transform duration-700" id="slider-track">
+    <div class="absolute inset-0 flex transition-transform duration-700 h-full" id="slider-track" style="height:100%;">
       <!-- Slide 1 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img3.jpeg" alt="Slide 1" class="w-full h-full object-cover border-0 absolute inset-0" />
-        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 max-w-[200vw] md:max-w-[1200px] text-center mx-auto">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
-            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+        <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
+            <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage
             </span>
           </h1>
-          <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
+          <p class="text-xs xs:text-sm sm:text-base md:text-lg text-gray-100 font-medium">
             Découvrez la tradition, la force et la passion du plus grand festival du nord Togo.
           </p>
         </div>
@@ -131,20 +207,20 @@
       <!-- Slide 2 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img2.jpeg" alt="Slide 2" class="w-full h-full object-cover border-0 absolute inset-0" />
-        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
-            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+        <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 rounded-xl max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
+            <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage
             </span>
           </h1>
-          <p class="text-sm xs:text-base md:text-lg text-gray-100 font-medium">
+          <p class="text-xs xs:text-sm sm:text-base md:text-lg text-gray-100 font-medium">
             Un rendez-vous d’initiation et de bravoure pour la jeunesse Kabyè.
           </p>
-          <div class="flex flex-row items-center justify-center gap-4 mt-4">
-            <button class="hover:bg-red-700 font-bold py-2 px-5 rounded-lg shadow transition duration-200" style="background-color:#d21b33 ;color:#fff;">
+          <div class="flex flex-col xs:flex-row items-center justify-center gap-2 sm:gap-4 mt-2 sm:mt-4">
+            <button class="hover:bg-red-700 font-bold py-2 px-4 sm:px-5 rounded-lg shadow transition duration-200 text-sm sm:text-base" style="background-color:#d21b33 ;color:#fff;">
               Acheter Ticket
             </button>
-            <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-5 rounded-lg shadow transition duration-200 relative overflow-hidden">
+            <button class="flex items-center gap-2 bg-white/80 hover:bg-green-100 text-green-800 font-semibold py-2 px-4 sm:px-5 rounded-lg shadow transition duration-200 relative overflow-hidden text-sm sm:text-base">
               <span class="relative z-10">Voir Vidéos</span>
               <span class="relative z-10">
                 <svg class="w-5 h-5 animate-pulse" fill="currentColor" viewBox="0 0 20 20">
@@ -159,13 +235,13 @@
       <!-- Slide 3 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img1.jpeg" alt="Slide 3" class="w-full h-full object-cover border-0 absolute inset-0" />
-        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
-            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+        <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 rounded-xl max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
+            <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage
             </span>
           </h1>
-          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+          <p class="text-xs xs:text-sm sm:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
             Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
           </p>
         </div>
@@ -173,13 +249,13 @@
       <!-- Slide 4 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img4.jpg" alt="Slide 4" class="w-full h-full object-cover border-0 absolute inset-0" />
-        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
-            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+        <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 rounded-xl max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
+            <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage
             </span>
           </h1>
-          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+          <p class="text-xs xs:text-sm sm:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
             Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
           </p>
         </div>
@@ -187,13 +263,13 @@
       <!-- Slide 5 -->
       <div class="relative w-full h-full flex-shrink-0 flex items-center justify-center">
         <img src="images/img6.jpg" alt="Slide 5" class="w-full h-full object-cover border-0 absolute inset-0" />
-        <div class="relative z-10 px-3 xs:px-5 md:px-10 py-4 xs:py-6 md:py-8 rounded-xl max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
-          <h1 class="text-2xl xs:text-3xl md:text-5xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-4 leading-tight">
-            <span class="font-extrabold whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
+        <div class="relative z-10 px-2 xs:px-3 sm:px-4 md:px-10 py-2 xs:py-4 md:py-8 rounded-xl max-w-full sm:max-w-[95vw] md:max-w-[1200px] text-center mx-auto">
+          <h1 class="text-lg xs:text-xl sm:text-2xl md:text-4xl lg:text-6xl font-extrabold text-white drop-shadow-[0_2px_4px_rgba(0,0,0,0.9)] mb-2 sm:mb-4 leading-tight">
+            <span class="font-extrabold whitespace-normal sm:whitespace-nowrap" style="color:#fff; text-shadow: 1px 1px 3px #000, 0 2px 6px #000;">
               Tradition respectée Valeurs & Courage
             </span>
           </h1>
-          <p class="text-sm xs:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
+          <p class="text-xs xs:text-sm sm:text-base md:text-lg text-white font-medium" style="text-shadow: 1px 1px 6px #000;">
             Les Evala, symbole d’unité et de fierté nationale pour tous les Togolais.
           </p>
         </div>
@@ -204,27 +280,27 @@
     <button id="next" class="absolute right-2 md:right-4 top-1/2 -translate-y-1/2 bg-opacity-20 rounded-full p-2 md:p-3 shadow hover:bg-green-100 transition text-2xl text-white md:text-3xl z-20">›</button>
     <!-- Place the MacBook effect list here, where the countdown was -->
     <div class="absolute bottom-50 left-1/2 -translate-x-1/2 z-20">
-      <ul class="flex gap-10">
-        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Témoignages">
+      <ul class="macbook-effect-list flex gap-10">
+        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Témoignages" id="open-testimony-modal">
           <!-- Testimony Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M17 8h2a2 2 0 012 2v8a2 2 0 01-2 2H5a2 2 0 01-2-2v-8a2 2 0 012-2h2m10 0V6a4 4 0 00-8 0v2m8 0H7" />
           </svg>
         </li>
-        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Sponsor">
+        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Sponsor" id="open-sponsor-modal">
           <!-- Sponsor/Handshake Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 15v2a2 2 0 002 2h4a2 2 0 002-2v-2m-8 0v2a2 2 0 01-2 2H4a2 2 0 01-2-2v-2m8 0V9m0 6H4m8 0h8" />
           </svg>
         </li>
-        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Programme">
+        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Programme" id="open-program-modal">
           <!-- Calendar Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect width="18" height="14" x="3" y="5" rx="2" stroke-width="2" stroke="currentColor" fill="none"/>
             <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M16 3v4M8 3v4M3 9h18" />
           </svg>
         </li>
-        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Contact">
+        <li class="macbook-effect-item font-bold text-white cursor-pointer transition-all duration-300" title="Contact" id="open-contact-modal">
           <!-- Mail Icon -->
           <svg xmlns="http://www.w3.org/2000/svg" class="w-14 h-14 mx-auto" fill="none" viewBox="0 0 24 24" stroke="currentColor">
             <rect width="20" height="14" x="2" y="5" rx="2" stroke-width="2" stroke="currentColor" fill="none"/>
@@ -232,6 +308,17 @@
           </svg>
         </li>
       </ul>
+    </div>
+    <!-- Modals -->
+    <div id="slider-modal-overlay" style="display:none;" class="fixed inset-0 z-50 flex items-center justify-center bg-black/70">
+      <div id="slider-modal-content" class="relative w-full h-full max-w-full max-h-full flex items-center justify-center">
+        <div class="bg-white rounded-lg shadow-lg w-[80vw] h-[75vh] max-w-3xl max-h-[90vh] overflow-auto flex flex-col items-center justify-center p-4 sm:p-8 md:p-12" style="position:relative;">
+          <button id="close-slider-modal" class="absolute top-4 right-4 text-3xl text-gray-700 hover:text-red-600 font-bold bg-white/80 rounded-full px-3 py-1 z-10" aria-label="Fermer">&times;</button>
+          <div id="slider-modal-body" class="w-full max-w-2xl mx-auto text-center">
+            <!-- Modal content will be injected here -->
+          </div>
+        </div>
+      </div>
     </div>
     <!-- Audio Player -->
     <div class="absolute left-0 right-0 bottom-0 z-30 w-full">
@@ -255,62 +342,90 @@
     </div>
   </div>
 </main>
-
 <script>
-  // Slider logic for fade effect
-  const sliderTrack = document.getElementById('slider-track');
-  const slides = sliderTrack.querySelectorAll('.relative.w-full.h-full.flex-shrink-0');
-  let current = 0;
-
-  function showSlide(idx) {
-    slides.forEach((slide, i) => {
-      slide.style.opacity = (i === idx) ? '1' : '0';
-      slide.style.zIndex = (i === idx) ? '1' : '0';
-      slide.style.pointerEvents = (i === idx) ? 'auto' : 'none';
-      slide.style.position = 'absolute';
-      slide.style.inset = '0';
-      slide.style.transition = 'opacity 0.7s cubic-bezier(0.4,0,0.2,1)';
-    });
+  // Modal logic for slider icons
+  function showSliderModal(contentHtml) {
+    document.getElementById('slider-modal-body').innerHTML = contentHtml;
+    document.getElementById('slider-modal-overlay').style.display = 'flex';
+    document.body.style.overflow = 'hidden';
   }
-
-  document.getElementById('prev').onclick = function() {
-    current = (current - 1 + slides.length) % slides.length;
-    showSlide(current);
-    resetAutoSlide();
-  };
-  document.getElementById('next').onclick = function() {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-    resetAutoSlide();
+  function closeSliderModal() {
+    document.getElementById('slider-modal-overlay').style.display = 'none';
+    document.body.style.overflow = '';
+  }
+  document.getElementById('close-slider-modal').onclick = closeSliderModal;
+  document.getElementById('slider-modal-overlay').onclick = function(e) {
+    if (e.target === this) closeSliderModal();
   };
 
-  // Swipe support for mobile
-  let startX = null;
-  sliderTrack.addEventListener('touchstart', e => startX = e.touches[0].clientX);
-  sliderTrack.addEventListener('touchend', e => {
-    if (startX === null) return;
-    let endX = e.changedTouches[0].clientX;
-    if (endX - startX > 50) document.getElementById('prev').click();
-    if (startX - endX > 50) document.getElementById('next').click();
-    startX = null;
-  });
-
-  // Auto-slide every 8 seconds
-  let autoSlide = setInterval(() => {
-    current = (current + 1) % slides.length;
-    showSlide(current);
-  }, 3000);
-
-  function resetAutoSlide() {
-    clearInterval(autoSlide);
-    autoSlide = setInterval(() => {
-      current = (current + 1) % slides.length;
-      showSlide(current);
-    }, 3000);
-  }
-
-  // Initialize
-  showSlide(current);
+  document.getElementById('open-testimony-modal').onclick = function() {
+    showSliderModal(`
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-red-700">Témoignages</h2>
+      <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="images/testimony1.jpg" alt="Kossi" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-red-400" />
+          <blockquote class="italic text-gray-800 text-base">"Un événement inoubliable, porteur de valeurs et de fraternité."</blockquote>
+          <span class="text-xs text-gray-500 mt-2">— Kossi, Kara</span>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="images/testimony2.jpg" alt="Akou" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-green-400" />
+          <blockquote class="italic text-gray-800 text-base">"La force et la tradition réunies dans une ambiance festive."</blockquote>
+          <span class="text-xs text-gray-500 mt-2">— Akou, Lomé</span>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="images/testimony3.jpg" alt="Yao" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-yellow-400" />
+          <blockquote class="italic text-gray-800 text-base">"J'ai découvert la vraie signification du courage et du respect."</blockquote>
+          <span class="text-xs text-gray-500 mt-2">— Yao, Sokodé</span>
+        </div>
+        <div class="bg-white rounded-lg shadow p-4 flex flex-col items-center">
+          <img src="images/testimony4.jpg" alt="Afi" class="w-20 h-20 rounded-full object-cover mb-2 border-2 border-blue-400" />
+          <blockquote class="italic text-gray-800 text-base">"Une expérience unique qui rassemble toute la communauté."</blockquote>
+          <span class="text-xs text-gray-500 mt-2">— Afi, Atakpamé</span>
+        </div>
+      </div>
+    `);
+  };
+  document.getElementById('open-sponsor-modal').onclick = function() {
+    showSliderModal(`
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-yellow-600">Sponsors</h2>
+      <div class="space-y-4 text-base sm:text-lg text-gray-800">
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/sponsor1.png" alt="Sponsor 1" class="h-12 sm:h-16 mb-2" />
+          <span class="font-semibold">Banque du Togo</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/sponsor2.png" alt="Sponsor 2" class="h-12 sm:h-16 mb-2" />
+          <span class="font-semibold">Togo Telecom</span>
+        </div>
+        <div class="flex flex-col items-center gap-2">
+          <img src="images/sponsor3.png" alt="Sponsor 3" class="h-12 sm:h-16 mb-2" />
+          <span class="font-semibold">Kara Drinks</span>
+        </div>
+      </div>
+    `);
+  };
+  document.getElementById('open-program-modal').onclick = function() {
+    showSliderModal(`
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-green-700">Programme</h2>
+      <ul class="text-left mx-auto max-w-md space-y-2 text-base sm:text-lg">
+        <li><span class="font-semibold">Jour 1:</span> Cérémonie d'ouverture et défilé</li>
+        <li><span class="font-semibold">Jour 2:</span> Lutte traditionnelle et animations</li>
+        <li><span class="font-semibold">Jour 3:</span> Concerts et remise de prix</li>
+      </ul>
+    `);
+  };
+  document.getElementById('open-contact-modal').onclick = function() {
+    showSliderModal(`
+      <h2 class="text-2xl sm:text-3xl font-bold mb-4 text-blue-700">Contact</h2>
+      <form class="w-full max-w-sm mx-auto space-y-4">
+        <input type="text" placeholder="Votre nom" class="w-full border rounded px-3 py-2" />
+        <input type="email" placeholder="Votre email" class="w-full border rounded px-3 py-2" />
+        <textarea placeholder="Votre message" class="w-full border rounded px-3 py-2"></textarea>
+        <button type="submit" class="w-full bg-green-600 text-white font-bold py-2 rounded hover:bg-green-700 transition">Envoyer</button>
+      </form>
+      <div class="mt-4 text-sm text-gray-500">Ou contactez-nous à <a href="mailto:info@evala.tg" class="underline text-blue-700">info@evala.tg</a></div>
+    `);
+  };
+  // ...existing code...
 </script>
-</body>
-</html>
+<!-- ...existing code... -->
