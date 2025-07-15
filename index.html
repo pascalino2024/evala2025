@@ -33,10 +33,12 @@
       transform: perspective(600px) rotateX(0deg) scale(1);
       box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
       background: #dc2626; /* Red background */
-      /* border-radius: 50%; */ /* Remove circular shape */
-      border-radius: 0.75rem;   /* Make it square with slightly rounded corners */
+      border-radius: 50%;   /* Make it perfectly circular */
       width: 90px;
       height: 90px;
+      /* Add a subtle border and shadow for a nicer look */
+      border: 3px solid #fff;
+      box-shadow: 0 4px 16px 0 rgba(220,38,38,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
       padding: 0;
       text-align: center;
       display: flex;
@@ -50,7 +52,7 @@
     }
     .macbook-effect-item:hover {
       transform: perspective(600px) rotateX(18deg) scale(1.08);
-      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+      box-shadow: 0 16px 40px 0 rgba(220,38,38,0.28), 0 2px 8px 0 rgba(0,0,0,0.08);
       background: #b91c1c; /* darker red on hover */
       z-index: 10;
     }
