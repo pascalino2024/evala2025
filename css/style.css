@@ -1,0 +1,122 @@
+ body, .header-nav {
+      font-family: 'Inter', Regular, sans-serif;
+    }
+    body {
+      min-height: 100vh;
+      background-color:#fff;
+      /* Removed background color to eliminate green background */
+    }
+    
+   
+    header ul li:hover {
+      background: #dc2626;
+      border-radius: 0.5rem;
+      transition: background 0.2s;
+    }
+    header ul li a {
+      display: block;
+      font-size:13px;
+      color:white;
+      padding: 0.25rem 0.75rem;
+    }
+    .macbook-effect-item {
+      transform: perspective(600px) rotateX(0deg) scale(1);
+      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
+      /* background: #dc2626; */ /* Remove red background */
+      background: transparent;
+      border-radius: 0.75rem !important; /* Square with nice border radius */
+      width: 90px;
+      height: 90px;
+      padding: 0;
+      /* border: 3px solid #fff; */ /* Remove white border */
+      box-shadow: 0 4px 16px 0 rgba(220,38,38,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+      text-align: center;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      transition:
+        transform 0.3s cubic-bezier(.4,2,.6,1),
+        box-shadow 0.3s cubic-bezier(.4,2,.6,1),
+        background 0.3s;
+      font-size: 1rem;
+    }
+    .macbook-effect-item:hover {
+      transform: perspective(600px) rotateX(18deg) scale(1.08);
+      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
+      background: #b91c1c; /* darker red on hover */
+      z-index: 10;
+    }
+    .macbook-effect-item:active {
+      transform: perspective(600px) rotateX(10deg) scale(1.04);
+      box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
+    }
+    .macbook-effect-item svg {
+      width: 3.0rem;
+      height: 3.0rem;
+    }
+    @media (max-width: 1024px) {
+      .macbook-effect-item svg {
+        width: 2.0rem;
+        height: 2.0rem;
+      }
+    }
+    @media (max-width: 640px) {
+      .macbook-effect-list {
+        flex-direction: row;
+        align-items: flex-start;
+        gap: 1.2rem;
+        margin-left: 1.5rem;
+        margin-top: 100px;
+        justify-content: flex-start;
+      }
+      .macbook-effect-item {
+        width: 56px !important;
+        height: 56px !important;
+        border-radius: 0.75rem !important; /* Square with nice border radius on mobile */
+        justify-content: center;
+        display: flex;
+        align-items: center;
+        padding: 0 !important;
+      }
+      .macbook-effect-item svg {
+        width: 2rem;
+        height: 2rem;
+        margin: auto;
+        display: block;
+      }
+    }
+    @media (min-width: 768px) {
+      .macbook-effect-item {
+        width: 120px;
+        height: 120px;
+        font-size: 1.15rem;
+      }
+    }
+    /* Responsive header styles */
+    .mobile-header {
+      display: none;
+    }
+    @media (max-width: 768px) {
+      .desktop-header {
+        display: none !important;
+      }
+      .mobile-header {
+        display: flex !important;
+      }
+    }
+    @media (min-width: 769px) {
+      .mobile-header {
+        display: none !important;
+      }
+      .desktop-header {
+        display: flex !important;
+      }
+    }
+    .desktop-header {
+      background: black !important;
+      height: 68px !important; /* 80px - 15% ≈ 68px */
+    }
+    .mobile-header {
+      background: black !important;
+      height: 54px !important; /* 64px - 15% ≈ 54px */
+    }
