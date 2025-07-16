@@ -1,28 +1,74 @@
 <!doctype html>
 <html>
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Evala 2025</title>
-  <!-- Google Fonts: Inter -->
-  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
-  <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- <link  rel="stylesheet" href="css/style.css" />
- <style>
-  @media  screen and (max-width: 768px) {
-    .slidetext{
-      font-size: 32px; /* Adjusted for smaller screens */
-       /* Adjusted for better readability */
-    }
-    .slidetext2 {
-       font-size: 20px; 
-       font-family:'arial';
-       margin-bottom:100px;
-   }
-    
-  }
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Evala 2025</title>
+    <!-- Google Fonts: Inter -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
+    <head>
+    <style>
+      body, .header-nav {
+        font-family: 'Inter', Regular, sans-serif;
+      }
+      body {
+        /* Removed background color and gradient */
+        min-height: 100vh;
+      }
+      ::selection {
+        background: #6ee7b7;
+      }
+      /* Custom scrollbar for modern look */
+      ::-webkit-scrollbar {
+        width: 8px;
+        background: #bae6fd;
+      }
+      ::-webkit-scrollbar-thumb {
+        background: #34d399;
+        border-radius: 8px;
+      }
+      /* Hide scrollbar for mobile nav overlay */
+      .mobile-nav::-webkit-scrollbar {
+        display: none;
+      }
 
- </style>
+
+
+   
+  /* Add this to your <head> or CSS file for fade effect */
+
+    
+  /* ...existing styles... */
+  header ul li:hover {
+    background: #dc2626; /* Tailwind's red-600 */
+    border-radius: 0.5rem;
+   
+    transition: background 0.2s;
+  }
+  header ul li a {
+    display: block;
+    font-size:13px;
+    color:white;
+    font-weight:none;
+    padding: 0.25rem 0.75rem;
+  }
+  @media (max-width: 640px) {
+    .blog-cards-grid {
+      display: grid !important;
+      grid-template-columns: repeat(2, minmax(0, 1fr));
+      gap: 1rem;
+    }
+    .blog-card {
+      width: 100% !important;
+      min-width: 0 !important;
+      max-width: none !important;
+    }
+  }
+</style>
+      
+    </style>
+</head>
 </head>
 <body>
 <!-- Responsive Header -->
@@ -128,6 +174,7 @@
   </div>
 </header>
 
+<!-- Blog Hero Banner -->
 <div class="w-full h-[320px] md:h-[420px] relative flex items-center justify-center mb-10">
   <img src="images/img3.jpeg" alt="Blog Banner" class="absolute inset-0 w-full h-full object-cover object-center z-0" style="filter: brightness(0.55);" />
   <div class="relative z-10 flex flex-col items-center justify-center w-full h-full">
@@ -334,10 +381,3 @@
 <script src="js/slider.js" > </script>
  <script src="js/modal-icons.js"></script>
   <script src="js/mobile-menu.js"></script>
-
-
-</body>
- <script src="js/slider.js" > </script>
- <script src="js/modal-icons.js"></script>
-  <script src="js/mobile-menu.js"></script>
-</html>

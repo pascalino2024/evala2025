@@ -1,0 +1,97 @@
+<div class="absolute left-0 right-0 bottom-0 w-full pb-32">
+      <div class="w-full overflow-x-auto relative" style="scrollbar-width: none; -ms-overflow-style: none;">
+    <style>
+      #foire-slider::-webkit-scrollbar { display: none; }
+      #foire-slider { scrollbar-width: none; -ms-overflow-style: none; }
+    </style>
+        <button id="foire-prev" class="absolute left-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white rounded-full p-2 shadow hover:bg-red-600 transition hidden md:block">&lt;</button>
+        <div id="foire-slider" class="flex gap-6 px-6 py-4 snap-x snap-mandatory overflow-x-auto scroll-smooth">
+          <!-- Stand 1 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test1.jpeg" alt="Stand Maïs Grillé" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Le Comptoir d’Amani</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Une boutique chaleureuse dédiée aux produits du terroir africain : épices rares, confitures </p>
+            <a href="shop.html?id=mais" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 2 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test2.jpeg" alt="Stand Sodabi" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Jus Frais </h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Liqueur artisanale locale à découvrir...</p>
+            <a href="shop.html?id=sodabi" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 3 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test3.jpeg" alt="Stand Bijoux" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Masque</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Bracelets artisanaux souvenirs uniques à offrir...</p>
+            <a href="shop.html?id=bijoux" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 4 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test4.jpeg" alt="Stand T-shirts" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Epices</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">T-shirts officiels Evala toutes tailles couleurs...</p>
+            <a href="shop.html?id=tshirt" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 5 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test5.jpeg" alt="Stand Haricot Bouilli" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Savons</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Haricots bouillis plats traditionnels et accompagnements...</p>
+            <a href="shop.html?id=haricot" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 6 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/masque.jpg" alt="Stand Masques" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Masques</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Masques traditionnels artisanat décoration locale...</p>
+            <a href="images/boutiques/test6.jpeg" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 7 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/savon.jpg" alt="Stand Savons" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Savons</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Savons artisanaux base d’ingrédients locaux...</p>
+            <a href="images/boutiques/test7.jpeg" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 8 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boisson.jpg" alt="Stand Boissons Fraîches" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Boissons Fraîches</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Jus naturels boissons locales rafraîchissements...</p>
+            <a href="shop.html?id=boissons" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 9 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test9.jpeg" alt="Stand Épices" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Épices</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Épices locales relever vos plats maison...</p>
+            <a href="shop.html?id=epices" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 10 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test10.jpeg" alt="Stand Pagne Africain" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Pagne Africain</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Pagne tissus vêtements traditionnels africains colorés...</p>
+            <a href="shop.html?id=pagne" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 11 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test11.jpeg" alt="Stand Chaussures" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Chaussures</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Sandales chaussures artisanales accessoires pour tous...</p>
+            <a href="shop.html?id=chaussures" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- Stand 12 -->
+          <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
+            <img src="images/boutiques/test12.jpeg" alt="Stand Peintures" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
+            <h3 class="font-bold text-lg text-green-900 mb-1">Stand Peintures</h3>
+            <p class="text-gray-700 text-sm mb-4 text-center">Peintures œuvres d’art locales à découvrir...</p>
+            <a href="shop.html?id=peintures" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+          </div>
+          <!-- ...existing code... -->
+        </div>
+        <button id="foire-next" class="absolute right-2 top-1/2 -translate-y-1/2 z-20 bg-black/40 text-white rounded-full p-2 shadow hover:bg-red-600 transition hidden md:block">&gt;</button>
+      </div>
+    </div>

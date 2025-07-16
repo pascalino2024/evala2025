@@ -7,23 +7,7 @@
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
- <link  rel="stylesheet" href="css/style.css" />
- <style>
-  @media  screen and (max-width: 768px) {
-    .slidetext{
-      font-size: 32px; /* Adjusted for smaller screens */
-       /* Adjusted for better readability */
-    }
-    .slidetext2 {
-       font-size: 20px; 
-       font-family:'arial';
-       margin-bottom:100px;
-   }
-    
-  }
-
- </style>
- <style>
+  <style>
     body, .header-nav {
       font-family: 'Inter', Regular, sans-serif;
     }
@@ -31,8 +15,6 @@
       min-height: 100vh;
       background-color:#fff;
       /* Removed background color to eliminate green background */
-      background: url('images/test11.jpeg') no-repeat center center fixed;
-      background-size: cover;
     }
     
    
@@ -167,29 +149,7 @@
       <li><a href="contact.html" class="text-green-900 font-semibold hover:text-green-300 transition">Contact</a></li>
     </ul>
   </div> 
-  <!-- Hamburger Menu for Mobile -->
-  <div class="md:hidden flex items-center justify-between px-4 w-full bg-black h-[50px]">
-      <button id="mobile-menu-btn" class="text-white focus:outline-none">
-      <svg class="w-8 h-8" fill="none" stroke="white" stroke-width="2" viewBox="0 0 24 24">
-        <path stroke-linecap="round" stroke-linejoin="round" d="M4 6h16M4 12h16M4 18h16"/>
-      </svg>
-    </button>
-  
-    <span class="mx-2 md:mx-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
-      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-      <a href=""><img src="images/LOGOEVALA.png" alt="" class="h-6 md:h-8" style="height:1.5rem; width:auto;" /></a>
-      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
-      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
-      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
-    </span>
-
-     <a href="calendrier.html" id="mobile-calendrier-btn"
-      class="flex items-center gap-2 bg-red-600 hover:bg-red-700 text-white font-bold py-2 px-3 rounded-lg shadow transition duration-200 text-sm"
-      style="margin-left:auto;">
-      Calendrier
-   </a>
+ 
 
 
    
@@ -243,8 +203,10 @@
     </a>
   </div>
 </header>
+
+<!-- Background image full width/height -->
 <div class="relative min-h-screen w-full">
- 
+  <img src="images/img2.jpeg" alt="Foire Evala" class="fixed inset-0 w-full h-full object-cover object-center z-0" style="min-height:50vh; min-width:50vw;"/>
   <div class="relative z-10 flex flex-col items-center   min-h-screen w-full bg-black/40">
     <h1 class="text-4xl md:text-5xl font-extrabold mt-[200px] text-white drop-shadow-lg mb-2 mt-6 text-center">La Foire Evala 2025</h1>
     <p class="text-lg md:text-xl text-white font-medium drop-shadow-md text-center max-w-2xl mb-2">
@@ -300,14 +262,14 @@
             <img src="images/masque.jpg" alt="Stand Masques" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
             <h3 class="font-bold text-lg text-green-900 mb-1">Stand Masques</h3>
             <p class="text-gray-700 text-sm mb-4 text-center">Masques traditionnels artisanat décoration locale...</p>
-            <a href="shop.html?id=mais" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+            <a href="images/boutiques/test6.jpeg" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
           </div>
           <!-- Stand 7 -->
           <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
             <img src="images/savon.jpg" alt="Stand Savons" class="w-full h-40 object-cover rounded-lg mb-3 cursor-zoom-in transition-transform duration-200 hover:scale-105 foire-img" />
             <h3 class="font-bold text-lg text-green-900 mb-1">Stand Savons</h3>
             <p class="text-gray-700 text-sm mb-4 text-center">Savons artisanaux base d’ingrédients locaux...</p>
-            <a href="shop.html?id=mais" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
+            <a href="images/boutiques/test7.jpeg" class="bg-green-700 hover:bg-green-800 text-white font-bold py-2 px-6 rounded transition">Voir la boutique</a>
           </div>
           <!-- Stand 8 -->
           <div class="min-w-[260px] max-w-xs bg-white/90 rounded-xl shadow-lg p-4 flex flex-col items-center snap-center">
@@ -351,6 +313,22 @@
     </div>
   </div>
 </div>
+<footer class="w-full bg-black text-green-100 py-3 px-4" style="position:relative; bottom:0; left:0; z-index:40;">
+  <div class="max-w-6xl mx-auto flex flex-col md:flex-row items-center justify-between gap-4">
+    <!-- Left: Tags/Links -->
+   
+    <!-- Right: Logo -->
+    <div class="flex items-center gap-2">
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+      <img src="images/LOGOEVALA.png" alt="Evala Logo" class="h-8 w-auto" />
+      <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
+      <span class="inline-block w-2 h-2 rounded-full bg-yellow-400"></span>
+    </div>
+  </div>
+</footer>
 <script>
   // Simple slider for the shop cards
   const slider = document.getElementById('foire-slider');
@@ -413,9 +391,8 @@
     }
   });
 </script>
-
-</body>
- <script src="js/slider.js" > </script>
  <script src="js/modal-icons.js"></script>
   <script src="js/mobile-menu.js"></script>
+  <script src="js/mobile-menu.js"></script>
+</body>
 </html>

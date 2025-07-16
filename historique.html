@@ -7,125 +7,28 @@
   <!-- Google Fonts: Inter -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
   <script src="https://cdn.jsdelivr.net/npm/@tailwindcss/browser@4"></script>
-  <style>
-    body, .header-nav {
-      font-family: 'Inter', Regular, sans-serif;
+ <link  rel="stylesheet" href="css/style.css" />
+ <style>
+  @media  screen and (max-width: 768px) {
+    .slidetext{
+      font-size: 32px; /* Adjusted for smaller screens */
+       /* Adjusted for better readability */
     }
-    body {
-      min-height: 100vh;
-      background-color:#fff;
-      /* Removed background color to eliminate green background */
-    }
+    .slidetext2 {
+       font-size: 20px; 
+       font-family:'arial';
+       margin-bottom:100px;
+   }
     
-   
-    header ul li:hover {
-      background: #dc2626;
-      border-radius: 0.5rem;
-      transition: background 0.2s;
-    }
-    header ul li a {
-      display: block;
-      font-size:13px;
-      color:white;
-      padding: 0.25rem 0.75rem;
-    }
-    .macbook-effect-item {
-      transform: perspective(600px) rotateX(0deg) scale(1);
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-      background: #dc2626; /* Red background */
-      /* border-radius: 50%; */ /* Remove circular shape */
-      border-radius: 0.75rem;   /* Make it square with slightly rounded corners */
-      width: 90px;
-      height: 90px;
-      padding: 0;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition:
-        transform 0.3s cubic-bezier(.4,2,.6,1),
-        box-shadow 0.3s cubic-bezier(.4,2,.6,1),
-        background 0.3s;
-      font-size: 1rem;
-    }
-    .macbook-effect-item:hover {
-      transform: perspective(600px) rotateX(18deg) scale(1.08);
-      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
-      background: #b91c1c; /* darker red on hover */
-      z-index: 10;
-    }
-    .macbook-effect-item:active {
-      transform: perspective(600px) rotateX(10deg) scale(1.04);
-      box-shadow: 0 8px 24px 0 rgba(0,0,0,0.13);
-    }
-    .macbook-effect-item svg {
-      width: 3.0rem;
-      height: 3.0rem;
-    }
-    @media (max-width: 1024px) {
-      .macbook-effect-item svg {
-        width: 2.0rem;
-        height: 2.0rem;
-      }
-    }
-    @media (max-width: 640px) {
-      .macbook-effect-list {
-        flex-direction: row;
-        align-items: flex-start;
-        gap: 1.2rem;
-        margin-left: 1.5rem;
-        margin-top: 100px;
-        justify-content: flex-start;
-      }
-      .macbook-effect-item {
-        width: auto !important;
-        height: auto !important;
-        justify-content: flex-start;
-        display: flex;
-        align-items: center;
-        padding: 0.75rem 1.25rem;
-      }
-      .macbook-effect-item svg {
-        width: 2rem;
-        height: 2rem;
-        margin-right: 0.75rem;
-        display: block;
-      }
-    }
-    @media (min-width: 768px) {
-      .macbook-effect-item {
-        width: 120px;
-        height: 120px;
-        font-size: 1.15rem;
-      }
-    }
-    /* Responsive header styles */
-    .mobile-header {
-      display: none;
-    }
-    @media (max-width: 768px) {
-      .desktop-header {
-        display: none !important;
-      }
-      .mobile-header {
-        display: flex !important;
-      }
-    }
-    @media (min-width: 769px) {
-      .mobile-header {
-        display: none !important;
-      }
-      .desktop-header {
-        display: flex !important;
-      }
-    }
-  </style>
+  }
+
+ </style>
 </head>
 <body>
 <!-- Responsive Header -->
 <header>
   <!-- Desktop Header -->
-  <div class="desktop-header fixed top-0 left-0 w-full z-50 flex items-center justify-between px-2 md:px-8">
+  <div class="desktop-header fixed top-0 left-0 w-full z-50 flex items-center justify-between px-2 md:px-8 h-[50px] bg-black">
     <span class="mx-2 md:mx-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
       <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
       <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
@@ -225,6 +128,7 @@
   </div>
 </header>
 
+
 <main class="max-w-4xl mx-auto pt-[70px] pb-24 px-4">
   <h1 class="text-3xl md:text-4xl font-extrabold text-green-900 mb-8 text-center">Histoire des Evala au Togo</h1>
  
@@ -310,4 +214,7 @@
 
 
 </body>
+ <script src="js/slider.js" > </script>
+ <script src="js/modal-icons.js"></script>
+  <script src="js/mobile-menu.js"></script>
 </html>

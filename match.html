@@ -13,49 +13,24 @@
     }
     body {
       min-height: 100vh;
-      background-color: #fff;
-      background-image: url('images/img4.jpg');
-      background-size: cover;
-      background-position: center;
-      background-repeat: no-repeat;
+      background: #000 !important;
+      color: #fff;
     }
     
-   
+    header ul li a {
+      color: #fff !important;
+    }
     header ul li:hover {
       background: #dc2626;
       border-radius: 0.5rem;
       transition: background 0.2s;
     }
-    header ul li a {
-      display: block;
-      font-size:13px;
-      color:white;
-      padding: 0.25rem 0.75rem;
-    }
     .macbook-effect-item {
-      transform: perspective(600px) rotateX(0deg) scale(1);
-      box-shadow: 0 2px 8px 0 rgba(0,0,0,0.08);
-      background: #dc2626; /* Red background */
-      /* border-radius: 50%; */ /* Remove circular shape */
-      border-radius: 0.75rem;   /* Make it square with slightly rounded corners */
-      width: 90px;
-      height: 90px;
-      padding: 0;
-      text-align: center;
-      display: flex;
-      align-items: center;
-      justify-content: center;
-      transition:
-        transform 0.3s cubic-bezier(.4,2,.6,1),
-        box-shadow 0.3s cubic-bezier(.4,2,.6,1),
-        background 0.3s;
-      font-size: 1rem;
+      background: #dc2626;
+      color: #fff;
     }
     .macbook-effect-item:hover {
-      transform: perspective(600px) rotateX(18deg) scale(1.08);
-      box-shadow: 0 16px 40px 0 rgba(0,0,0,0.18), 0 2px 8px 0 rgba(0,0,0,0.08);
-      background: #b91c1c; /* darker red on hover */
-      z-index: 10;
+      background: #b91c1c;
     }
     .macbook-effect-item:active {
       transform: perspective(600px) rotateX(10deg) scale(1.04);
@@ -122,13 +97,53 @@
         display: flex !important;
       }
     }
+    main, #events-panel, .day-tab, .rounded-lg.bg-white {
+      background: #fff !important;
+      color: #222 !important;
+    }
+    .day-tab {
+      border: none;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+    }
+    .day-tab.bg-white.text-green-700 {
+      background: #dc2626 !important;
+      color: #fff !important;
+      ring-color: #fff !important;
+    }
+    .text-green-800, .text-green-700, .text-green-600 {
+      color: #22c55e !important;
+    }
+    .font-bold.text-gray-500 {
+      color: #ffd700 !important;
+    }
+    .rounded-lg.bg-white.p-6 {
+      border: 2px solid #22c55e;
+    }
+    .bg-green-600 {
+      background: #22c55e !important;
+      color: #fff !important;
+    }
+    .bg-green-700 {
+      background: #16a34a !important;
+      color: #fff !important;
+    }
+    .bg-green-800 {
+      background: #166534 !important;
+      color: #fff !important;
+    }
+    .bg-red-600 {
+      background: #dc2626 !important;
+    }
+    .bg-yellow-400 {
+      background: #facc15 !important;
+    }
   </style>
 </head>
 <body>
 <!-- Responsive Header -->
 <header>
   <!-- Desktop Header -->
-  <div class="desktop-header fixed top-0 left-0 w-full z-50 flex items-center justify-between px-2 md:px-8">
+  <div class="desktop-header fixed top-0 left-0 w-full z-50 flex items-center justify-between px-2 md:px-8 h-[50px] bg-black">
     <span class="mx-2 md:mx-4 text-lg md:text-xl font-extrabold tracking-tight select-none flex items-center gap-1" style="font-family: 'Inter', system-ui, sans-serif;">
       <span class="inline-block w-2 h-2 rounded-full bg-red-600"></span>
       <span class="inline-block w-2 h-2 rounded-full bg-green-600"></span>
